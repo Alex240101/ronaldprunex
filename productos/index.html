@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Fuxion</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>FUXION</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../inicio/" class="nav-link">Inicio</a></li>
+                    <li><a href="./" class="nav-link active">Productos</a></li>
+                    <li><a href="../catalogo/" class="nav-link">Catálogo</a></li>
+                    <li><a href="../contacto/" class="nav-link">Contacto</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Nuestros Productos</h1>
+            <p>Explora nuestra amplia gama de productos nutracéuticos para cada necesidad.</p>
+        </div>
+    </section>
+
+    <!-- Products Filter -->
+    <section class="products-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">Todos</button>
+                <button class="filter-btn" data-category="bienestar">Bienestar General</button>
+                <button class="filter-btn" data-category="energia">Energía y Vitalidad</button>
+                <button class="filter-btn" data-category="control-peso">Control de Peso</button>
+                <button class="filter-btn" data-category="deporte">Deporte y Rendimiento</button>
+                <button class="filter-btn" data-category="detox">Detox y Limpieza</button>
+                <button class="filter-btn" data-category="inmunidad">Inmunidad</button>
+                <button class="filter-btn" data-category="digestivo">Digestivo</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid">
+                <!-- Product Card: Prunex -->
+                <div class="product-card" data-category="digestivo">
+                    <div class="product-image">
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img/Prunex1_m63h2Lz.png" alt="Prunex">
+                        <div class="product-overlay">
+                            <a href="../producto-prunex/" class="btn btn-primary">Ver Más</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Prunex</h3>
+                        <p>Té herbal para limpieza de colon y combatir el estreñimiento.</p>
+                        <div class="product-price">S/ 76.00</div>
+                    </div>
+                </div>
+                <!-- Product Card: Flora Liv -->
+                <div class="product-card" data-category="digestivo">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Flora Liv">
+                        <div class="product-overlay">
+                            <a href="../producto-flora-liv/" class="btn btn-primary">Ver Más</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Flora Liv</h3>
+                        <p>Refresco para mejorar la digestión y flora intestinal.</p>
+                        <div class="product-price">S/ 154.00</div>
+                    </div>
+                </div>
+                <!-- Product Card: Berry Balance -->
+                <div class="product-card" data-category="bienestar">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Berry Balance">
+                        <div class="product-overlay">
+                            <a href="../producto-berry-balance/" class="btn btn-primary">Ver Más</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Berry Balance</h3>
+                        <p>Bebida de arándanos para la salud del tracto urinario.</p>
+                        <div class="product-price">S/ 169.00</div>
+                    </div>
+                </div>
+                <!-- Product Card: Alpha Balance -->
+                <div class="product-card" data-category="detox">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Alpha Balance">
+                        <div class="product-overlay">
+                            <a href="../producto-alpha-balance/" class="btn btn-primary">Ver Más</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Alpha Balance</h3>
+                        <p>Bebida de vegetales verdes para limpieza y equilibrio del PH.</p>
+                        <div class="product-price">S/ 129.50</div>
+                    </div>
+                </div>
+                <!-- Product Card: Rexet -->
+                <div class="product-card" data-category="bienestar">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Rexet">
+                        <div class="product-overlay">
+                            <a href="../producto-rexet/" class="btn btn-primary">Ver Más</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Rexet</h3>
+                        <p>Refresco efervescente para proteger y desintoxicar el hígado.</p>
+                        <div class="product-price">S/ 129.50</div>
+                    </div>
+                </div>
+                <!-- Product Card: Programa Detox 5-Días -->
+                <div class="product-card" data-category="detox">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Programa Detox 5-Días">
+                        <div class="product-overlay">
+                            <a href="../producto-programa-detox-5-dias/" class="btn btn-primary">Ver Más</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Programa Detox 5-Días</h3>
+                        <p>Programa completo para nutrir y potenciar la auto-limpieza del cuerpo.</p>
+                        <div class="product-price">S/ 175.00</div>
+                    </div>
+                </div>
+                <!-- Product Card: Liquid Fiber -->
+                <div class="product-card" data-category="digestivo">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Liquid Fiber">
+                        <div class="product-overlay">
+                            <a href="../producto-liquid-fiber/" class="btn btn-primary">Ver Más</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Liquid Fiber</h3>
+                        <p>Bebida sabor limón para nutrir la flora intestinal y regular el tránsito.</p>
+                        <div class="product-price">S/ 105.00</div>
+                    </div>
+                </div>
+                <!-- Product Card: Biopro+ Tect Pote 500G -->
+                <div class="product-card" data-category="inmunidad">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Biopro+ Tect Pote 500G">
+                        <div class="product-overlay">
+                            <a href="../producto-biopro-tect/" class="btn btn-primary">Ver Más</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Biopro+ Tect Pote 500G</h3>
+                        <p>Batido de proteína para mejorar defensas y fortalecer huesos.</p>
+                        <div class="product-price">S/ 163.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container newsletter-content">
+            <h2>¡Mantente al día con Fuxion!</h2>
+            <p>Suscríbete a nuestro boletín para recibir las últimas noticias, ofertas y consejos de salud.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Tu correo electrónico" required>
+                <button type="submit" class="btn btn-primary">Suscribirse</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FUXION</h3>
+                    <p>Transformando vidas a través de la nutrición y el bienestar integral.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="../inicio/">Inicio</a></li>
+                        <li><a href="./">Productos</a></li>
+                        <li><a href="../catalogo/">Catálogo</a></li>
+                        <li><a href="../contacto/">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-phone"></i> +51 934 498 803</p>
+                    <p><i class="fas fa-envelope"></i> info@fuxion.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Lima, Perú</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fuxion. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prunex - Fuxion</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>FUXION</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../inicio/" class="nav-link">Inicio</a></li>
+                    <li><a href="../productos/" class="nav-link">Productos</a></li>
+                    <li><a href="../catalogo/" class="nav-link">Catálogo</a></li>
+                    <li><a href="../contacto/" class="nav-link">Contacto</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav>
+                <a href="../inicio/">Inicio</a> > 
+                <a href="../productos/">Productos</a> > 
+                <span>Prunex</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Product Detail -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-detail-grid">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="mainImage" src="https://aware-backend.s3.amazonaws.com/media/product/img/Prunex1_m63h2Lz.png" alt="Prunex">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img/Prunex1_m63h2Lz.png" alt="Prunex Vista 1" onclick="changeImage(this.src)">
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img/Prunex1_Flyer.png" alt="Prunex Vista 2" onclick="changeImage(this.src)">
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img2/Prunex1_Tabla.png" alt="Prunex Vista 3" onclick="changeImage(this.src)">
+                    </div>
+                </div>
+                
+                <div class="product-info">
+                    <h1>PRUNEX1 (PE)</h1>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span>(127 reseñas)</span>
+                    </div>
+                    
+                    <div class="product-price">
+                        <span class="current-price">PEN 76.00</span>
+                    </div>
+                    
+                    <div class="product-description">
+                        <p>Delicioso té herbal sabor a ciruelas y guindones, perfecto para una limpieza de colon profunda y combatir el estreñimiento.</p>
+                    </div>
+                    
+                    <!-- TABLA DE INFORMACIÓN NUTRICIONAL (usando la imagen de la tabla) -->
+                    <div class="nutrition-table">
+                        <h3>Información Nutricional</h3>
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img2/Prunex1_Tabla.png" alt="Tabla Nutricional Prunex" style="width:100%; max-width: 400px; display: block; margin: 1rem auto;">
+                        <p class="text-center"><em>*Imagen de referencia de la tabla nutricional.</em></p>
+                    </div>
+                    
+                    <!-- BENEFICIOS PRINCIPALES -->
+                    <div class="product-benefits">
+                        <h3>Beneficios Principales:</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Estimula la actividad del colon gracias a su efecto laxante.</li>
+                            <li><i class="fas fa-check"></i> Ayuda a tener un adecuado tránsito intestinal y así evitar la indigestión luego de comidas muy pesadas o abundantes.</li>
+                            <li><i class="fas fa-check"></i> Promueve la desintoxicación del colon.</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- ESPECIFICACIONES DEL PRODUCTO -->
+                    <div class="product-specs">
+                        <h3>Especificaciones:</h3>
+                        <ul>
+                            <li><strong>Precio:</strong> PEN 76.00</li>
+                            <li><strong>Puntos:</strong> 10 puntos</li>
+                        </ul>
+                    </div>
+
+                    <!-- Ingredientes Detallados (basado en la descripción de fusión nutracéutica) -->
+                    <div class="ingredients-detailed">
+                        <h3>Fusión Nutracéutica:</h3>
+                        <div class="ingredients-grid">
+                            <div class="ingredient-card">
+                                <h4>Mix de Fibras</h4>
+                                <p>Incluye Psylium, Inulina de achicoria y Mucílago de Linaza para un óptimo tránsito intestinal.</p>
+                            </div>
+                            <div class="ingredient-card">
+                                <h4>Kelp</h4>
+                                <p>Alga marina con propiedades beneficiosas para el metabolismo.</p>
+                            </div>
+                            <div class="ingredient-card">
+                                <h4>Anís Estrella</h4>
+                                <p>Ayuda a reducir la hinchazón y mejorar la digestión.</p>
+                            </div>
+                            <div class="ingredient-card">
+                                <h4>Extracto de Guindones</h4>
+                                <p>Fuente natural de fibra y antioxidantes, contribuye a la regularidad.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-large" onclick="comprarWhatsApp()">
+                            <i class="fab fa-whatsapp"></i> Comprar Ahora
+                        </button>
+                        <button class="btn btn-secondary btn-large">
+                            <i class="fas fa-heart"></i> Agregar a Favoritos
+                        </button>
+                    </div>
+                    
+                    <div class="product-guarantee">
+                        <div class="guarantee-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Garantía de calidad</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-truck"></i>
+                            <span>Envío gratis en compras mayores a S/ 150</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-undo"></i>
+                            <span>30 días para devoluciones</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Tabs -->
+    <section class="product-tabs">
+        <div class="container">
+            <div class="tabs-header">
+                <button class="tab-btn active" onclick="openTab(event, 'description')">Descripción Detallada</button>
+                <button class="tab-btn" onclick="openTab(event, 'videos')">Videos</button>
+                <button class="tab-btn" onclick="openTab(event, 'reviews')">Reseñas</button>
+            </div>
+            
+            <div id="description" class="tab-content active">
+                <h3>Descripción Completa de Prunex</h3>
+                <p><strong>Fusión Nutracéutica:</strong> Mix de Fibras (Psylium, Inulina de achicoria, Mucílago de Linaza) Kelp, Anís Estrella, Extracto de Guindones.</p>
+                <p>Bebida frutal en base a mix de fibras solubles y extracto de guindones, los cuales representan una alternativa eficaz en casos de estreñimiento, promoviendo la desintoxicación del colon.</p>
+                
+                <h4>Esta fusión te ayudará a:</h4>
+                <ul>
+                    <li>Estimular la actividad del colon gracias a su efecto laxante.</li>
+                    <li>Tener un adecuado tránsito intestinal y así evitar la indigestión luego de comidas muy pesadas o abundantes.</li>
+                </ul>
+                <img src="https://aware-backend.s3.amazonaws.com/media/product/img/Prunex1_Flyer.png" alt="Flyer Prunex" style="width:100%; max-width: 600px; display: block; margin: 2rem auto;">
+            </div>
+            
+            <div id="videos" class="tab-content">
+                <h3>Videos Informativos</h3>
+                <div class="video-container">
+                    <iframe src="https://player.vimeo.com/video/296680733" width="100%" height="362" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+                <div class="video-container" style="margin-top: 2rem;">
+                    <iframe src="https://player.vimeo.com/video/296685408" width="100%" height="362" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <div id="reviews" class="tab-content">
+                <h3>Reseñas de Clientes</h3>
+                <div class="reviews-summary">
+                    <div class="rating-overview">
+                        <div class="overall-rating">
+                            <span class="rating-number">4.8</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="total-reviews">127 reseñas</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reviews-list">
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-name">María González</div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p>"Excelente producto. He notado una mejora significativa en mi energía y bienestar general después de 2 meses de uso."</p>
+                    </div>
+                    
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-name">Carlos Mendoza</div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p>"Lo recomiendo totalmente. La calidad es excelente y los resultados son visibles. Mi sistema inmunológico se ha fortalecido notablemente."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <div class="container">
+            <h2>Productos Relacionados</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="/placeholder.svg?height=250&width=250" alt="Té Verde Plus">
+                    <h3>Té Verde Plus</h3>
+                    <div class="product-price">S/ 65.90</div>
+                    <a href="#" class="btn btn-outline">Ver Producto</a>
+                </div>
+                <div class="product-card">
+                    <img src="/placeholder.svg?height=250&width=250" alt="Omega 3">
+                    <h3>Omega 3 Plus</h3>
+                    <div class="product-price">S/ 75.90</div>
+                    <a href="#" class="btn btn-outline">Ver Producto</a>
+                </div>
+                <div class="product-card">
+                    <img src="/placeholder.svg?height=250&width=250" alt="Multivitamínico">
+                    <h3>Multivitamínico Complete</h3>
+                    <div class="product-price">S/ 95.90</div>
+                    <a href="#" class="btn btn-outline">Ver Producto</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FUXION</h3>
+                    <p>Transformando vidas a través de la nutrición y el bienestar integral.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="../inicio/">Inicio</a></li>
+                        <li><a href="../productos/">Productos</a></li>
+                        <li><a href="../catalogo/">Catálogo</a></li>
+                        <li><a href="../contacto/">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-phone"></i> +51 934 498 803</p>
+                    <p><i class="fas fa-envelope"></i> info@fuxion.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Lima, Perú</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fuxion. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

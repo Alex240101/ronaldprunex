@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Fuxion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>FUXION</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="inicio.html" class="nav-link">Inicio</a></li>
+                    <li><a href="productos.html" class="nav-link active">Productos</a></li>
+                    <li><a href="catalogo.html" class="nav-link">Catálogo</a></li>
+                    <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Nuestros Productos</h1>
+            <p>Descubre nuestra completa línea de productos nutricionales</p>
+        </div>
+    </section>
+
+    <!-- Products Filter -->
+    <section class="products-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="antioxidantes">Antioxidantes</button>
+                <button class="filter-btn" data-filter="energia">Energía</button>
+                <button class="filter-btn" data-filter="proteinas">Proteínas</button>
+                <button class="filter-btn" data-filter="bienestar">Bienestar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid">
+                <div class="product-card" data-category="antioxidantes">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Prunex">
+                        <div class="product-overlay">
+                            <a href="producto-prunex.html" class="btn btn-primary">Más Información</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Prunex</h3>
+                        <p>Potente antioxidante natural que fortalece tu sistema inmunológico y combate los radicales libres.</p>
+                        <div class="product-price">S/ 89.90</div>
+                        <a href="producto-prunex.html" class="btn btn-outline">Ver Detalles</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="energia">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Té Verde Plus">
+                        <div class="product-overlay">
+                            <a href="#" class="btn btn-primary">Más Información</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Té Verde Plus</h3>
+                        <p>Acelera tu metabolismo y quema grasa de forma natural mientras te proporciona energía sostenida.</p>
+                        <div class="product-price">S/ 65.90</div>
+                        <a href="#" class="btn btn-outline">Ver Detalles</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="proteinas">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Protein Shake">
+                        <div class="product-overlay">
+                            <a href="#" class="btn btn-primary">Más Información</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Protein Shake</h3>
+                        <p>Proteína completa de alta calidad para el desarrollo muscular y recuperación post-entrenamiento.</p>
+                        <div class="product-price">S/ 125.90</div>
+                        <a href="#" class="btn btn-outline">Ver Detalles</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="bienestar">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Omega 3">
+                        <div class="product-overlay">
+                            <a href="#" class="btn btn-primary">Más Información</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Omega 3 Plus</h3>
+                        <p>Ácidos grasos esenciales para la salud cardiovascular y el funcionamiento cerebral óptimo.</p>
+                        <div class="product-price">S/ 75.90</div>
+                        <a href="#" class="btn btn-outline">Ver Detalles</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="energia">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Hydro Energy">
+                        <div class="product-overlay">
+                            <a href="#" class="btn btn-primary">Más Información</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Hydro Energy</h3>
+                        <p>Bebida hidratante con electrolitos y vitaminas para un rendimiento deportivo superior.</p>
+                        <div class="product-price">S/ 45.90</div>
+                        <a href="#" class="btn btn-outline">Ver Detalles</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="bienestar">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Multivitamínico">
+                        <div class="product-overlay">
+                            <a href="#" class="btn btn-primary">Más Información</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Multivitamínico Complete</h3>
+                        <p>Complejo vitamínico y mineral para cubrir todas las necesidades nutricionales diarias.</p>
+                        <div class="product-price">S/ 95.90</div>
+                        <a href="#" class="btn btn-outline">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FUXION</h3>
+                    <p>Transformando vidas a través de la nutrición y el bienestar integral.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="inicio.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-phone"></i> +51 934 498 803</p>
+                    <p><i class="fas fa-envelope"></i> info@fuxion.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Lima, Perú</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fuxion. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

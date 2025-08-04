@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liquid Fiber - Fuxion</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+      <nav class="navbar">
+          <div class="nav-container">
+              <div class="logo">
+                  <h2>FUXION</h2>
+              </div>
+              <ul class="nav-menu">
+                  <li><a href="../inicio/" class="nav-link">Inicio</a></li>
+                  <li><a href="../productos/" class="nav-link">Productos</a></li>
+                  <li><a href="../catalogo/" class="nav-link">Catálogo</a></li>
+                  <li><a href="../contacto/" class="nav-link">Contacto</a></li>
+              </ul>
+              <div class="hamburger">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
+          </div>
+      </nav>
+  </header>
+
+  <!-- Breadcrumb -->
+  <section class="breadcrumb">
+      <div class="container">
+          <nav>
+              <a href="../inicio/">Inicio</a> > 
+              <a href="../productos/">Productos</a> > 
+              <span>Liquid Fiber</span>
+          </nav>
+      </div>
+  </section>
+
+  <!-- Product Detail -->
+  <section class="product-detail">
+      <div class="container">
+          <div class="product-detail-grid">
+              <div class="product-images">
+                  <div class="main-image">
+                      <img id="mainImage" src="/placeholder.svg?height=400&width=400" alt="Liquid Fiber">
+                  </div>
+                  <div class="thumbnail-images">
+                      <img src="/placeholder.svg?height=400&width=400" alt="Liquid Fiber Vista 1" onclick="changeImage(this.src)">
+                      <img src="/placeholder.svg?height=200&width=200" alt="Liquid Fiber Tabla Nutricional" onclick="changeImage(this.src)">
+                  </div>
+              </div>
+              
+              <div class="product-info">
+                  <h1>LIQUID FIBER (PE)</h1>
+                  <div class="product-rating">
+                      <div class="stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star-half-alt"></i>
+                      </div>
+                      <span>(70 reseñas)</span>
+                  </div>
+                  
+                  <div class="product-price">
+                      <span class="current-price">PEN 105.00</span>
+                  </div>
+                  
+                  <div class="product-description">
+                      <p>Deliciosa bebida sabor limón, creada por FuXion para nutrir y proteger la flora intestinal y promover la puntualidad del tránsito intestinal, ahora con etiqueta Clean Label.</p>
+                  </div>
+                  
+                  <!-- TABLA DE INFORMACIÓN NUTRICIONAL (usando la imagen de la tabla) -->
+                  <div class="nutrition-table">
+                      <h3>Información Nutricional</h3>
+                      <img src="/placeholder.svg?height=200&width=200" alt="Tabla Nutricional Liquid Fiber" style="width:100%; max-width: 400px; display: block; margin: 1rem auto;">
+                      <p class="text-center"><em>*Imagen de referencia de la tabla nutricional.</em></p>
+                  </div>
+                  
+                  <!-- BENEFICIOS PRINCIPALES -->
+                  <div class="product-benefits">
+                      <h3>Beneficios Principales:</h3>
+                      <ul>
+                          <li><i class="fas fa-check"></i> Nutre y protege la flora intestinal.</li>
+                          <li><i class="fas fa-check"></i> Promueve la puntualidad en el tránsito intestinal.</li>
+                          <li><i class="fas fa-check"></i> Ayuda a regular naturalmente el ritmo de las evacuaciones intestinales.</li>
+                          <li><i class="fas fa-check"></i> Disminuye y hace más lenta la absorción de grasas y azúcares de los alimentos.</li>
+                          <li><i class="fas fa-check"></i> Mejora la asimilación del calcio.</li>
+                      </ul>
+                  </div>
+                  
+                  <!-- ESPECIFICACIONES DEL PRODUCTO -->
+                  <div class="product-specs">
+                      <h3>Especificaciones:</h3>
+                      <ul>
+                          <li><strong>Precio:</strong> PEN 105.00</li>
+                          <li><strong>Puntos:</strong> 16 puntos</li>
+                      </ul>
+                  </div>
+
+                  <!-- Ingredientes Detallados -->
+                  <div class="ingredients-detailed">
+                      <h3>Fusión Nutracéutica:</h3>
+                      <div class="ingredients-grid">
+                          <div class="ingredient-card">
+                              <h4>Fibra Prebiótica</h4>
+                              <p>Fibra soluble de cadena corta y larga que nutre la flora intestinal.</p>
+                          </div>
+                          <div class="ingredient-card">
+                              <h4>Vitaminas y Minerales</h4>
+                              <p>Micronutrientes esenciales para el bienestar general.</p>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <div class="product-actions">
+                      <button class="btn btn-primary btn-large" onclick="comprarWhatsApp()">
+                          <i class="fab fa-whatsapp"></i> Comprar Ahora
+                      </button>
+                      <button class="btn btn-secondary btn-large">
+                          <i class="fas fa-heart"></i> Agregar a Favoritos
+                      </button>
+                  </div>
+                  
+                  <div class="product-guarantee">
+                      <div class="guarantee-item">
+                          <i class="fas fa-shield-alt"></i>
+                          <span>Garantía de calidad</span>
+                      </div>
+                      <div class="guarantee-item">
+                          <i class="fas fa-truck"></i>
+                          <span>Envío gratis en compras mayores a S/ 150</span>
+                      </div>
+                      <div class="guarantee-item">
+                          <i class="fas fa-undo"></i>
+                          <span>30 días para devoluciones</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Product Tabs -->
+  <section class="product-tabs">
+      <div class="container">
+          <div class="tabs-header">
+              <button class="tab-btn active" onclick="openTab(event, 'description')">Descripción Detallada</button>
+              <button class="tab-btn" onclick="openTab(event, 'reviews')">Reseñas</button>
+          </div>
+          
+          <div id="description" class="tab-content active">
+              <h3>Descripción Completa de Liquid Fiber</h3>
+              <p><strong>Fusión Nutracéutica:</strong> Fibra Prebiótica + Vitaminas + Minerales.</p>
+              <p>Deliciosa bebida con sabor a limón, en base a fibra soluble y micronutrientes que en conjunto nutren y protegen la flora intestinal para promover la puntualidad en el tránsito intestinal. Liquid Fibra ayuda a regular naturalmente el ritmo de las evacuaciones intestinales. Por su alto contenido de fibra soluble de cadena corta y larga te ayudará a:</p>
+              <ul>
+                  <li>Regular naturalmente el ritmo de las evacuaciones intestinales.</li>
+                  <li>Disminuir y hacer más lenta la absorción de grasas y azúcares de los alimentos.</li>
+                  <li>Mejorar la asimilación del calcio.</li>
+              </ul>
+              <img src="/placeholder.svg?height=400&width=600" alt="Liquid Fiber Beneficios" style="width:100%; max-width: 600px; display: block; margin: 2rem auto;">
+          </div>
+          
+          <div id="reviews" class="tab-content">
+              <h3>Reseñas de Clientes</h3>
+              <div class="reviews-summary">
+                  <div class="rating-overview">
+                      <div class="overall-rating">
+                          <span class="rating-number">4.7</span>
+                          <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i>
+                          </div>
+                          <span class="total-reviews">70 reseñas</span>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="reviews-list">
+                  <div class="review-item">
+                      <div class="review-header">
+                          <div class="reviewer-name">Pedro Gómez</div>
+                          <div class="review-rating">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                          </div>
+                      </div>
+                      <p>"Liquid Fiber es excelente para mantener mi digestión regular. El sabor a limón es muy refrescante. ¡Lo recomiendo a todos!"</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Related Products -->
+  <section class="related-products">
+      <div class="container">
+          <h2>Productos Relacionados</h2>
+          <div class="products-grid">
+              <div class="product-card">
+                  <img src="/placeholder.svg?height=250&width=250" alt="Prunex">
+                  <h3>Prunex</h3>
+                  <div class="product-price">S/ 76.00</div>
+                  <a href="../producto-prunex/" class="btn btn-outline">Ver Producto</a>
+              </div>
+              <div class="product-card">
+                  <img src="/placeholder.svg?height=250&width=250" alt="Flora Liv">
+                  <h3>Flora Liv</h3>
+                  <div class="product-price">S/ 154.00</div>
+                  <a href="../producto-flora-liv/" class="btn btn-outline">Ver Producto</a>
+              </div>
+              <div class="product-card">
+                  <img src="/placeholder.svg?height=250&width=250" alt="Alpha Balance">
+                  <h3>Alpha Balance</h3>
+                  <div class="product-price">S/ 129.50</div>
+                  <a href="../producto-alpha-balance/" class="btn btn-outline">Ver Producto</a>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+      <div class="container">
+          <div class="footer-content">
+              <div class="footer-section">
+                  <h3>FUXION</h3>
+                  <p>Transformando vidas a través de la nutrición y el bienestar integral.</p>
+                  <div class="social-links">
+                      <a href="#"><i class="fab fa-facebook"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-whatsapp"></i></a>
+                  </div>
+              </div>
+              <div class="footer-section">
+                  <h4>Enlaces Rápidos</h4>
+                  <ul>
+                      <li><a href="../inicio/">Inicio</a></li>
+                      <li><a href="../productos/">Productos</a></li>
+                      <li><a href="../catalogo/">Catálogo</a></li>
+                      <li><a href="../contacto/">Contacto</a></li>
+                  </ul>
+              </div>
+              <div class="footer-section">
+                  <h4>Contacto</h4>
+                  <p><i class="fas fa-phone"></i> +51 934 498 803</p>
+                  <p><i class="fas fa-envelope"></i> info@fuxion.com</p>
+                  <p><i class="fas fa-map-marker-alt"></i> Lima, Perú</p>
+              </div>
+          </div>
+          <div class="footer-bottom">
+              <p>&copy; 2024 Fuxion. Todos los derechos reservados.</p>
+          </div>
+      </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
