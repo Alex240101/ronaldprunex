@@ -80,6 +80,9 @@ document.addEventListener("DOMContentLoaded", () => {
       })
     })
   }
+
+  // FIX: Add 'loaded' class to body to make content visible
+  document.body.classList.add("loaded")
 })
 
 // Función para comprar por WhatsApp (generalizada para cualquier producto)
@@ -90,7 +93,7 @@ function comprarWhatsApp() {
 
   const productName = productNameElement ? productNameElement.textContent.trim() : "un producto Fuxion"
   const productPrice = productPriceElement ? productPriceElement.textContent.trim() : "precio no especificado"
-  
+
   const phoneNumber = "51934498803" // Número de WhatsApp sin el '+'
 
   const message = `¡Hola! Estoy interesado/a en comprar ${productName} (${productPrice}). ¿Podrías darme más información para concretar la compra?`
