@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fuxion - Nutrición y Bienestar</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Inicio - Fuxion</title>
+    <link rel="stylesheet" href="./styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -16,10 +16,10 @@
                     <h2>FUXION</h2>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="inicio.html" class="nav-link active">Inicio</a></li>
-                    <li><a href="productos.html" class="nav-link">Productos</a></li>
-                    <li><a href="catalogo.html" class="nav-link">Catálogo</a></li>
-                    <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                    <li><a href="./" class="nav-link active">Inicio</a></li>
+                    <li><a href="./productos/" class="nav-link">Productos</a></li>
+                    <li><a href="./catalogo/" class="nav-link">Catálogo</a></li>
+                    <li><a href="./contacto/" class="nav-link">Contacto</a></li>
                 </ul>
                 <div class="hamburger">
                     <span></span>
@@ -32,16 +32,16 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>Transforma tu Vida con Fuxion</h1>
-            <p>Descubre nuestra línea completa de productos nutricionales diseñados para potenciar tu bienestar y rendimiento.</p>
+        <div class="container hero-content">
+            <h1>Bienvenido a Fuxion: <br>Salud Verdadera, Vida Plena.</h1>
+            <p>Descubre nuestra innovadora línea de productos nutracéuticos diseñados para optimizar tu bienestar y energía diaria.</p>
             <div class="hero-buttons">
-                <a href="productos.html" class="btn btn-primary">Ver Productos</a>
-                <a href="catalogo.html" class="btn btn-secondary">Descargar Catálogo</a>
+                <a href="./productos/" class="btn btn-primary btn-large">Ver Productos</a>
+                <a href="./contacto/" class="btn btn-outline btn-large">Contáctanos</a>
             </div>
         </div>
         <div class="hero-image">
-            <img src="/placeholder.svg?height=500&width=600" alt="Productos Fuxion">
+            <img src="/placeholder.svg?height=600&width=600" alt="Bebidas saludables y frutas">
         </div>
     </section>
 
@@ -52,55 +52,88 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <i class="fas fa-leaf"></i>
-                    <h3>100% Natural</h3>
-                    <p>Productos elaborados con ingredientes naturales de la más alta calidad.</p>
+                    <h3>Ingredientes Naturales</h3>
+                    <p>Formulaciones basadas en la sabiduría de la naturaleza y la ciencia.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-flask"></i>
+                    <h3>Innovación Científica</h3>
+                    <p>Productos desarrollados con tecnología de punta para máxima absorción.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Bienestar Integral</h3>
+                    <p>Soluciones para energía, digestión, inmunidad y más.</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-award"></i>
-                    <h3>Certificado</h3>
-                    <p>Todos nuestros productos cuentan con certificaciones internacionales.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-shipping-fast"></i>
-                    <h3>Envío Rápido</h3>
-                    <p>Entrega rápida y segura en todo el territorio nacional.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-headset"></i>
-                    <h3>Soporte 24/7</h3>
-                    <p>Atención personalizada para resolver todas tus dudas.</p>
+                    <h3>Calidad Garantizada</h3>
+                    <p>Estrictos controles de calidad para tu seguridad y confianza.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Products Preview -->
+    <!-- Products Preview Section -->
     <section class="products-preview">
         <div class="container">
-            <h2>Productos Destacados</h2>
+            <h2>Nuestros Productos Destacados</h2>
             <div class="products-grid">
                 <div class="product-card">
-                    <img src="/placeholder.svg?height=250&width=250" alt="Prunex">
-                    <h3>Prunex</h3>
-                    <p>Potente antioxidante natural que fortalece tu sistema inmunológico.</p>
-                    <a href="producto-prunex.html" class="btn btn-outline">Ver Más</a>
+                    <div class="product-image">
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img/Prunex1_m63h2Lz.png" alt="Prunex">
+                        <div class="product-overlay">
+                            <a href="./producto-prunex/" class="btn btn-primary">Ver Más</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Prunex</h3>
+                        <p>Té herbal para limpieza de colon y combatir el estreñimiento.</p>
+                        <div class="product-price">S/ 76.00</div>
+                    </div>
                 </div>
                 <div class="product-card">
-                    <img src="/placeholder.svg?height=250&width=250" alt="Té Verde">
-                    <h3>Té Verde Plus</h3>
-                    <p>Acelera tu metabolismo y quema grasa de forma natural.</p>
-                    <a href="#" class="btn btn-outline">Ver Más</a>
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Flora Liv">
+                        <div class="product-overlay">
+                            <a href="./producto-flora-liv/" class="btn btn-primary">Ver Más</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Flora Liv</h3>
+                        <p>Refresco para mejorar la digestión y flora intestinal.</p>
+                        <div class="product-price">S/ 154.00</div>
+                    </div>
                 </div>
                 <div class="product-card">
-                    <img src="/placeholder.svg?height=250&width=250" alt="Protein Shake">
-                    <h3>Protein Shake</h3>
-                    <p>Proteína completa para el desarrollo muscular óptimo.</p>
-                    <a href="#" class="btn btn-outline">Ver Más</a>
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Berry Balance">
+                        <div class="product-overlay">
+                            <a href="./producto-berry-balance/" class="btn btn-primary">Ver Más</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Berry Balance</h3>
+                        <p>Bebida de arándanos para la salud del tracto urinario.</p>
+                        <div class="product-price">S/ 169.00</div>
+                    </div>
                 </div>
             </div>
             <div class="text-center">
-                <a href="productos.html" class="btn btn-primary">Ver Todos los Productos</a>
+                <a href="./productos/" class="btn btn-secondary btn-large">Ver Todos los Productos</a>
             </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container newsletter-content">
+            <h2>¡Mantente al día con Fuxion!</h2>
+            <p>Suscríbete a nuestro boletín para recibir las últimas noticias, ofertas y consejos de salud.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Tu correo electrónico" required>
+                <button type="submit" class="btn btn-primary">Suscribirse</button>
+            </form>
         </div>
     </section>
 
@@ -120,10 +153,10 @@
                 <div class="footer-section">
                     <h4>Enlaces Rápidos</h4>
                     <ul>
-                        <li><a href="inicio.html">Inicio</a></li>
-                        <li><a href="productos.html">Productos</a></li>
-                        <li><a href="catalogo.html">Catálogo</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="./">Inicio</a></li>
+                        <li><a href="./productos/">Productos</a></li>
+                        <li><a href="./catalogo/">Catálogo</a></li>
+                        <li><a href="./contacto/">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -139,6 +172,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
