@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>On - Fuxion</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
     <!-- Header -->
@@ -30,58 +30,191 @@
         </nav>
     </header>
 
-    <!-- Product Detail Section -->
-    <section class="product-detail-section">
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav>
+                <a href="../inicio/">Inicio</a> &gt; 
+                <a href="../productos/">Productos</a> &gt; 
+                <span>On</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Product Detail -->
+    <section class="product-detail">
         <div class="container">
             <div class="product-detail-grid">
-                <div class="product-detail-image">
-                    <img src="/placeholder.svg?height=500&width=500" alt="On">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="mainImage" src="https://aware-backend.s3.amazonaws.com/media/product/img/On_DoyPack.png" alt="On" />
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img/On_DoyPack.png" alt="On Vista 1" onclick="changeImage(this.src)" />
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img/On_Flyer.png" alt="On Vista 2" onclick="changeImage(this.src)" />
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img2/On_Tabla_umMV71M.png" alt="On Vista 3" onclick="changeImage(this.src)" />
+                    </div>
                 </div>
-                <div class="product-detail-info">
+
+                <div class="product-info">
                     <h1>On</h1>
-                    <p class="product-price">S/ 150.00</p>
-                    <p class="product-description">Bebida con aminoácidos, vitaminas y minerales para mejorar la concentración, el enfoque mental y el rendimiento cognitivo.</p>
-                    
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span>(35 reseñas)</span>
+                    </div>
+
+                    <div class="product-price">
+                        <span class="current-price">S/ 105.00</span>
+                    </div>
+
+                    <div class="product-description">
+                        <p>Bebida con aminoácidos, vitaminas y minerales para mejorar la concentración, el enfoque mental y el rendimiento cognitivo.</p>
+                    </div>
+
                     <div class="product-benefits">
                         <h3>Beneficios Clave:</h3>
                         <ul>
-                            <li>Mejora la concentración y el enfoque.</li>
-                            <li>Aumenta el rendimiento cognitivo.</li>
-                            <li>Reduce la fatiga mental.</li>
-                            <li>Apoya la salud cerebral.</li>
+                            <li><i class="fas fa-check"></i> Mejora la concentración y el enfoque.</li>
+                            <li><i class="fas fa-check"></i> Aumenta el rendimiento cognitivo.</li>
+                            <li><i class="fas fa-check"></i> Reduce la fatiga mental.</li>
+                            <li><i class="fas fa-check"></i> Apoya la salud cerebral.</li>
                         </ul>
                     </div>
 
-                    <div class="product-ingredients">
-                        <h3>Ingredientes Principales:</h3>
+                    <div class="product-specs">
+                        <h3>Especificaciones:</h3>
                         <ul>
-                            <li>Aminoácidos (Taurina, L-Tirosina)</li>
-                            <li>Vitaminas del Complejo B</li>
-                            <li>Magnesio</li>
-                            <li>Extracto de Té Verde</li>
+                            <li><strong>Precio:</strong> S/ 105.00</li>
+                            <li><strong>Puntos:</strong> 16 puntos</li>
                         </ul>
                     </div>
 
-                    <div class="product-usage">
-                        <h3>Modo de Uso:</h3>
-                        <p>Disolver un stick en un vaso de agua y consumir cuando necesites un impulso de concentración.</p>
+                    <div class="ingredients-detailed">
+                        <h3>Ingredientes Principales:</h3>
+                        <div class="ingredients-grid">
+                            <div class="ingredient-card">
+                                <h4>Aminoácidos (Taurina, L-Tirosina)</h4>
+                                <p>Favorecen el rendimiento mental y energía.</p>
+                            </div>
+                            <div class="ingredient-card">
+                                <h4>Vitaminas del Complejo B</h4>
+                                <p>Contribuyen al bienestar cerebral y nervioso.</p>
+                            </div>
+                            <div class="ingredient-card">
+                                <h4>Magnesio</h4>
+                                <p>Ayuda a la función neuromuscular.</p>
+                            </div>
+                            <div class="ingredient-card">
+                                <h4>Extracto de Té Verde</h4>
+                                <p>Antioxidante natural que mejora la concentración.</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <button class="btn btn-primary" onclick="comprarWhatsApp('On', '150.00')">Comprar por WhatsApp</button>
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-large" onclick="comprarWhatsApp('On', '150.00')">
+                            <i class="fab fa-whatsapp"></i> Comprar Ahora
+                        </button>
+                        <button class="btn btn-secondary btn-large">
+                            <i class="fas fa-heart"></i> Agregar a Favoritos
+                        </button>
+                    </div>
+
+                    <div class="product-guarantee">
+                        <div class="guarantee-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Garantía de calidad</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-truck"></i>
+                            <span>Envío gratis en compras mayores a S/ 150</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-undo"></i>
+                            <span>30 días para devoluciones</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <section class="newsletter-section">
-        <div class="container newsletter-content">
-            <h2>¡Mantente al día con Fuxion!</h2>
-            <p>Suscríbete a nuestro boletín para recibir las últimas noticias, ofertas y consejos de salud.</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Tu correo electrónico" required>
-                <button type="submit" class="btn btn-primary">Suscribirse</button>
-            </form>
+    <!-- Product Tabs -->
+    <section class="product-tabs">
+        <div class="container">
+            <div class="tabs-header">
+                <button class="tab-btn active" onclick="openTab(event, 'description')">Descripción Detallada</button>
+                <button class="tab-btn" onclick="openTab(event, 'reviews')">Reseñas</button>
+            </div>
+
+            <div id="description" class="tab-content active">
+                <h3>Descripción Completa de On</h3>
+                <p><strong>On</strong> es una bebida diseñada para potenciar el rendimiento cognitivo y mejorar la concentración mediante ingredientes seleccionados cuidadosamente.</p>
+                <p>Incluye aminoácidos, vitaminas y minerales que apoyan la función cerebral y reducen la fatiga mental.</p>
+
+                <h4>Beneficios adicionales:</h4>
+                <ul>
+                    <li>Mejora el enfoque mental y la memoria.</li>
+                    <li>Aumenta la energía cerebral de forma natural.</li>
+                    <li>Reduce el estrés y la fatiga.</li>
+                </ul>
+                <img src="https://aware-backend.s3.amazonaws.com/media/product/img/On_DoyPack.png" alt="Flyer On" style="width:100%; max-width: 600px; display: block; margin: 2rem auto;" />
+            </div>
+
+            <div id="reviews" class="tab-content" style="display:none;">
+                <h3>Reseñas de Clientes</h3>
+                <div class="reviews-summary">
+                    <div class="rating-overview">
+                        <div class="overall-rating">
+                            <span class="rating-number">4.6</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="total-reviews">35 reseñas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews-list">
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-name">Luis Pérez</div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p>"On me ha ayudado mucho en mis horas de estudio, me siento más concentrado."</p>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-name">María López</div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <p>"Buen producto, me ayuda a mantenerme enfocada durante el día."</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -119,6 +252,27 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
+        }
+        function openTab(evt, tabName) {
+            let i, tabcontent, tabbuttons;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tabbuttons = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
 
     <script src="../script.js"></script>
 </body>

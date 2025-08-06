@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Golden Flx - Fuxion</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
     <!-- Header -->
@@ -30,58 +30,207 @@
         </nav>
     </header>
 
-    <!-- Product Detail Section -->
-    <section class="product-detail-section">
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav>
+                <a href="../inicio/">Inicio</a> &gt; 
+                <a href="../productos/">Productos</a> &gt; 
+                <span>Golden Flx</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Product Detail -->
+    <section class="product-detail">
         <div class="container">
             <div class="product-detail-grid">
-                <div class="product-detail-image">
-                    <img src="/placeholder.svg?height=500&width=500" alt="Golden Flx">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="mainImage" src="https://aware-backend.s3.amazonaws.com/media/product/img/Golden_Flx_ASs8rQj.png" alt="Golden Flx" />
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img/Golden_Flx_ASs8rQj.png" alt="Golden Flx Vista 1" onclick="changeImage(this.src)" />
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img/Golden_Flx_Per%C3%BA.png" alt="Golden Flx Vista 2" onclick="changeImage(this.src)" />
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img2/Golden_Flx_Tabla_bMyfLuz.jpg" alt="Golden Flx Vista 3" onclick="changeImage(this.src)" />
+                    </div>
                 </div>
-                <div class="product-detail-info">
+
+                <div class="product-info">
                     <h1>Golden Flx</h1>
-                    <p class="product-price">S/ 139.00</p>
-                    <p class="product-description">Bebida con cúrcuma, jengibre y cardamomo para la flexibilidad, el bienestar articular y la reducción de la inflamación.</p>
-                    
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span>(48 reseñas)</span>
+                    </div>
+
+                    <div class="product-price">
+                        <span class="current-price">S/ 163.00</span>
+                    </div>
+
+                    <div class="product-description">
+                        <p>Bebida con cúrcuma, jengibre y cardamomo para la flexibilidad, el bienestar articular y la reducción de la inflamación.</p>
+                    </div>
+
+                    <div class="nutrition-table">
+                        <h3>Información Nutricional</h3>
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img2/Golden_Flx_Tabla_bMyfLuz.jpg" alt="Tabla Nutricional Golden Flx" style="width:100%; max-width: 400px; display: block; margin: 1rem auto;" />
+                        <p class="text-center"><em>*Imagen de referencia de la tabla nutricional.</em></p>
+                    </div>
+
                     <div class="product-benefits">
                         <h3>Beneficios Clave:</h3>
                         <ul>
-                            <li>Mejora la flexibilidad articular.</li>
-                            <li>Reduce la inflamación.</li>
-                            <li>Alivia el dolor articular.</li>
-                            <li>Propiedades antioxidantes.</li>
+                            <li><i class="fas fa-check"></i> Mejora la flexibilidad articular.</li>
+                            <li><i class="fas fa-check"></i> Reduce la inflamación.</li>
+                            <li><i class="fas fa-check"></i> Alivia el dolor articular.</li>
+                            <li><i class="fas fa-check"></i> Propiedades antioxidantes.</li>
                         </ul>
                     </div>
 
-                    <div class="product-ingredients">
-                        <h3>Ingredientes Principales:</h3>
+                    <div class="product-specs">
+                        <h3>Especificaciones:</h3>
                         <ul>
-                            <li>Extracto de Cúrcuma</li>
-                            <li>Jengibre</li>
-                            <li>Cardamomo</li>
-                            <li>Pimienta Negra</li>
+                            <li><strong>Precio:</strong> S/ 163.00</li>
+                            <li><strong>Puntos:</strong> 22 puntos</li>
                         </ul>
                     </div>
 
-                    <div class="product-usage">
-                        <h3>Modo de Uso:</h3>
-                        <p>Disolver un stick en un vaso de agua caliente o fría y consumir una vez al día.</p>
+                    <div class="ingredients-detailed">
+                        <h3>Ingredientes Principales:</h3>
+                        <div class="ingredients-grid">
+                            <div class="ingredient-card">
+                                <h4>Extracto de Cúrcuma</h4>
+                                <p>Antiinflamatorio natural que ayuda a reducir dolor.</p>
+                            </div>
+                            <div class="ingredient-card">
+                                <h4>Jengibre</h4>
+                                <p>Mejora la circulación y alivia molestias.</p>
+                            </div>
+                            <div class="ingredient-card">
+                                <h4>Cardamomo</h4>
+                                <p>Contribuye a la digestión y bienestar general.</p>
+                            </div>
+                            <div class="ingredient-card">
+                                <h4>Pimienta Negra</h4>
+                                <p>Potencia los efectos de los otros ingredientes.</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <button class="btn btn-primary" onclick="comprarWhatsApp('Golden Flx', '139.00')">Comprar por WhatsApp</button>
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-large" onclick="comprarWhatsApp('Golden Flx', '139.00')">
+                            <i class="fab fa-whatsapp"></i> Comprar Ahora
+                        </button>
+                        <button class="btn btn-secondary btn-large">
+                            <i class="fas fa-heart"></i> Agregar a Favoritos
+                        </button>
+                    </div>
+
+                    <div class="product-guarantee">
+                        <div class="guarantee-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Garantía de calidad</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-truck"></i>
+                            <span>Envío gratis en compras mayores a S/ 150</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-undo"></i>
+                            <span>30 días para devoluciones</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <section class="newsletter-section">
-        <div class="container newsletter-content">
-            <h2>¡Mantente al día con Fuxion!</h2>
-            <p>Suscríbete a nuestro boletín para recibir las últimas noticias, ofertas y consejos de salud.</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Tu correo electrónico" required>
-                <button type="submit" class="btn btn-primary">Suscribirse</button>
-            </form>
+    <!-- Product Tabs -->
+    <section class="product-tabs">
+        <div class="container">
+            <div class="tabs-header">
+                <button class="tab-btn active" onclick="openTab(event, 'description')">Descripción Detallada</button>
+                <button class="tab-btn" onclick="openTab(event, 'reviews')">Reseñas</button>
+            </div>
+
+            <div id="description" class="tab-content active">
+                <h3>Descripción Completa de Golden Flx</h3>
+                <p><strong>Golden Flx</strong> es una bebida natural con ingredientes seleccionados para mejorar la salud articular y reducir inflamaciones.</p>
+                <p>Contiene cúrcuma, jengibre, cardamomo y pimienta negra que juntos brindan bienestar y alivio.</p>
+
+                <h4>Beneficios adicionales:</h4>
+                <ul>
+                    <li>Mejora la flexibilidad y movilidad articular.</li>
+                    <li>Reduce el dolor e inflamación.</li>
+                    <li>Propiedades antioxidantes para proteger las células.</li>
+                </ul>
+                <img src="https://aware-backend.s3.amazonaws.com/media/product/img/Golden_Flx_ASs8rQj.png" alt="Flyer Golden Flx" style="width:100%; max-width: 600px; display: block; margin: 2rem auto;" />
+            </div>
+
+            <div id="videos" class="tab-content" style="display:none;">
+                <h3>Videos Informativos</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/example1" width="100%" height="362" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="video-container" style="margin-top: 2rem;">
+                    <iframe src="https://www.youtube.com/embed/example2" width="100%" height="362" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div id="reviews" class="tab-content" style="display:none;">
+                <h3>Reseñas de Clientes</h3>
+                <div class="reviews-summary">
+                    <div class="rating-overview">
+                        <div class="overall-rating">
+                            <span class="rating-number">4.5</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="total-reviews">48 reseñas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews-list">
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-name">Ana Torres</div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p>"Golden Flx ha ayudado a aliviar mis dolores articulares de manera sorprendente."</p>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-name">Miguel Díaz</div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <p>"Buen producto, he notado mejoría en pocas semanas."</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -119,6 +268,27 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
+        }
+        function openTab(evt, tabName) {
+            let i, tabcontent, tabbuttons;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tabbuttons = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
 
     <script src="../script.js"></script>
 </body>

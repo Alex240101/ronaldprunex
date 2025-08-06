@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Prunex Caja 7x5g - Fuxion</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
     <!-- Header -->
@@ -30,58 +30,194 @@
         </nav>
     </header>
 
-    <!-- Product Detail Section -->
-    <section class="product-detail-section">
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav>
+                <a href="../inicio/">Inicio</a> &gt;
+                <a href="../productos/">Productos</a> &gt;
+                <span>Prunex Caja 7x5g</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Product Detail -->
+    <section class="product-detail">
         <div class="container">
             <div class="product-detail-grid">
-                <div class="product-detail-image">
-                    <img src="/placeholder.svg?height=500&width=500" alt="Prunex Caja 7x5g">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="mainImage" src="https://aware-backend.s3.amazonaws.com/media/product/img/Mini_PruneX1_Caja.png" alt="Prunex Caja 7x5g" />
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img/Mini_PruneX1_Caja.png" alt="Vista 1" onclick="changeImage(this.src)" />
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img/Prunex1_Peru_shmXkSi.png" alt="Vista 2" onclick="changeImage(this.src)" />
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img2/Prunex1_Tabla_kqAzyXb.png" alt="Vista 3" onclick="changeImage(this.src)" />
+                    </div>
                 </div>
-                <div class="product-detail-info">
+
+                <div class="product-info">
                     <h1>Prunex Caja 7x5g</h1>
-                    <p class="product-price">S/ 76.00</p>
-                    <p class="product-description">Prunex en formato de caja con 7 sobres individuales, ideal para una limpieza de colon práctica y efectiva.</p>
-                    
+
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span>(27 reseñas)</span>
+                    </div>
+
+                    <div class="product-price">
+                        <span class="current-price">S/ 21.00</span>
+                    </div>
+
+                    <div class="product-description">
+                        <p>Prunex en formato de caja con 7 sobres individuales, ideal para una limpieza de colon práctica y efectiva.</p>
+                    </div>
+
                     <div class="product-benefits">
                         <h3>Beneficios Clave:</h3>
                         <ul>
-                            <li>Promueve la limpieza de colon.</li>
-                            <li>Combate el estreñimiento.</li>
-                            <li>Mejora el tránsito intestinal.</li>
-                            <li>Formato práctico para llevar.</li>
+                            <li><i class="fas fa-check"></i> Promueve la limpieza de colon.</li>
+                            <li><i class="fas fa-check"></i> Combate el estreñimiento.</li>
+                            <li><i class="fas fa-check"></i> Mejora el tránsito intestinal.</li>
+                            <li><i class="fas fa-check"></i> Formato práctico para llevar.</li>
                         </ul>
                     </div>
 
-                    <div class="product-ingredients">
-                        <h3>Ingredientes Principales:</h3>
+                    <div class="product-specs">
+                        <h3>Especificaciones:</h3>
                         <ul>
-                            <li>Mix de Fibras (Psyllium, Inulina de Achicoria)</li>
-                            <li>Extracto de Ciruela</li>
-                            <li>Anís Estrella</li>
-                            <li>Kelp</li>
+                            <li><strong>Precio:</strong> S/ 21.00</li>
+                            <li><strong>Presentación:</strong> Caja con 7 sobres de 5g</li>
+                            <li><strong>Puntos:</strong> 2 Puntos </li>
+
                         </ul>
                     </div>
 
-                    <div class="product-usage">
-                        <h3>Modo de Uso:</h3>
-                        <p>Disolver un sobre en un vaso de agua caliente y consumir por la noche antes de dormir.</p>
+                    <div class="ingredients-detailed">
+                        <h3>Ingredientes Principales:</h3>
+                        <div class="ingredients-grid">
+                            <div class="ingredient-card">
+                                <h4>Mix de Fibras</h4>
+                                <p>Psyllium e Inulina de Achicoria para salud intestinal.</p>
+                            </div>
+                            <div class="ingredient-card">
+                                <h4>Extracto de Ciruela</h4>
+                                <p>Ayuda a mejorar el tránsito intestinal.</p>
+                            </div>
+                            <div class="ingredient-card">
+                                <h4>Anís Estrella</h4>
+                                <p>Propiedades digestivas y carminativas.</p>
+                            </div>
+                            <div class="ingredient-card">
+                                <h4>Kelp</h4>
+                                <p>Fuente natural de minerales y vitaminas.</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <button class="btn btn-primary" onclick="comprarWhatsApp('Prunex Caja 7x5g', '76.00')">Comprar por WhatsApp</button>
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-large" onclick="comprarWhatsApp('Prunex Caja 7x5g', '76.00')">
+                            <i class="fab fa-whatsapp"></i> Comprar Ahora
+                        </button>
+                        <button class="btn btn-secondary btn-large">
+                            <i class="fas fa-heart"></i> Agregar a Favoritos
+                        </button>
+                    </div>
+
+                    <div class="product-guarantee">
+                        <div class="guarantee-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Garantía de calidad</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-truck"></i>
+                            <span>Envío gratis en compras mayores a S/ 150</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-undo"></i>
+                            <span>30 días para devoluciones</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <section class="newsletter-section">
-        <div class="container newsletter-content">
-            <h2>¡Mantente al día con Fuxion!</h2>
-            <p>Suscríbete a nuestro boletín para recibir las últimas noticias, ofertas y consejos de salud.</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Tu correo electrónico" required>
-                <button type="submit" class="btn btn-primary">Suscribirse</button>
-            </form>
+    <!-- Product Tabs -->
+    <section class="product-tabs">
+        <div class="container">
+            <div class="tabs-header">
+                <button class="tab-btn active" onclick="openTab(event, 'description')">Descripción Detallada</button>
+                <button class="tab-btn" onclick="openTab(event, 'reviews')">Reseñas</button>
+            </div>
+
+            <div id="description" class="tab-content active">
+                <h3>Descripción Completa de Prunex Caja 7x5g</h3>
+                <p><strong>Prunex</strong> en formato práctico de sobres individuales para una limpieza de colon efectiva y cómoda.</p>
+                <p>Contiene un mix de fibras, extractos naturales y minerales que apoyan la salud digestiva y el tránsito intestinal.</p>
+
+                <h4>Beneficios adicionales:</h4>
+                <ul>
+                    <li>Promueve la limpieza natural del colon.</li>
+                    <li>Alivia el estreñimiento.</li>
+                    <li>Facilita el tránsito intestinal regular.</li>
+                </ul>
+                <img src="https://aware-backend.s3.amazonaws.com/media/product/img/Mini_PruneX1_Caja.png" alt="Flyer Prunex Caja 7x5g" style="width:100%; max-width: 600px; display: block; margin: 2rem auto;" />
+            </div>
+
+            <div id="reviews" class="tab-content" style="display:none;">
+                <h3>Reseñas de Clientes</h3>
+                <div class="reviews-summary">
+                    <div class="rating-overview">
+                        <div class="overall-rating">
+                            <span class="rating-number">4.4</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="total-reviews">27 reseñas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews-list">
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-name">María López</div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p>"Muy efectivo, mejoró mi tránsito intestinal rápidamente."</p>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-name">Carlos Mendoza</div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <p>"Fácil de usar y buen sabor. Lo recomiendo."</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -119,6 +255,27 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
+        }
+        function openTab(evt, tabName) {
+            let i, tabcontent, tabbuttons;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tabbuttons = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
 
     <script src="../script.js"></script>
 </body>

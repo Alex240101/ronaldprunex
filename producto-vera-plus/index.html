@@ -1,124 +1,223 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vera+ - Fuxion</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vera+ - Fuxion</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="logo">
-                    <h2>FUXION</h2>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="../inicio/" class="nav-link">Inicio</a></li>
-                    <li><a href="../productos/" class="nav-link active">Productos</a></li>
-                    <li><a href="../catalogo/" class="nav-link">Catálogo</a></li>
-                    <li><a href="../contacto/" class="nav-link">Contacto</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
-    </header>
 
-    <!-- Product Detail Section -->
-    <section class="product-detail-section">
-        <div class="container">
-            <div class="product-detail-grid">
-                <div class="product-detail-image">
-                    <img src="/placeholder.svg?height=500&width=500" alt="Vera+">
-                </div>
-                <div class="product-detail-info">
-                    <h1>Vera+</h1>
-                    <p class="product-price">S/ 115.00</p>
-                    <p class="product-description">Bebida de aloe vera para la salud digestiva, la desinflamación y el cuidado de la piel.</p>
-                    
-                    <div class="product-benefits">
-                        <h3>Beneficios Clave:</h3>
-                        <ul>
-                            <li>Mejora la salud digestiva.</li>
-                            <li>Ayuda a desinflamar.</li>
-                            <li>Contribuye a una piel saludable.</li>
-                            <li>Apoya la cicatrización.</li>
-                        </ul>
-                    </div>
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo"><h2>FUXION</h2></div>
+        <ul class="nav-menu">
+          <li><a href="../inicio/" class="nav-link">Inicio</a></li>
+          <li><a href="../productos/" class="nav-link">Productos</a></li>
+          <li><a href="../catalogo/" class="nav-link">Catálogo</a></li>
+          <li><a href="../contacto/" class="nav-link">Contacto</a></li>
+        </ul>
+        <div class="hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </nav>
+  </header>
 
-                    <div class="product-ingredients">
-                        <h3>Ingredientes Principales:</h3>
-                        <ul>
-                            <li>Aloe Vera</li>
-                            <li>Vitaminas y Minerales</li>
-                            <li>Extractos herbales</li>
-                        </ul>
-                    </div>
+  <!-- Breadcrumb -->
+  <section class="breadcrumb">
+    <div class="container">
+      <nav>
+        <a href="../inicio/">Inicio</a> > 
+        <a href="../productos/">Productos</a> > 
+        <span>Vera+</span>
+      </nav>
+    </div>
+  </section>
 
-                    <div class="product-usage">
-                        <h3>Modo de Uso:</h3>
-                        <p>Disolver un stick en un vaso de agua y consumir una vez al día, preferiblemente antes de las comidas.</p>
-                    </div>
-
-                    <button class="btn btn-primary" onclick="comprarWhatsApp('Vera+', '115.00')">Comprar por WhatsApp</button>
-                </div>
+  <!-- Product Detail -->
+  <section class="product-detail">
+    <div class="container">
+      <div class="product-detail-grid">
+        <div class="product-images">
+          <div class="main-image">
+            <img id="mainImage" src="https://aware-backend.s3.amazonaws.com/media/product/img/Vera_RGQP5zL.png" alt="Vera+" />
+          </div>
+          <div class="thumbnail-images">
+            <img src="https://aware-backend.s3.amazonaws.com/media/product/img/Vera_RGQP5zL.png" alt="Vera+ mini" onclick="changeImage(this.src)" />
+            <img src="https://aware-backend.s3.amazonaws.com/media/product/img/Vera_Flyer_pczLdo8.png" alt="Vera+ mini" onclick="changeImage(this.src)" />
+            <img src="https://aware-backend.s3.amazonaws.com/media/product/img2/Vera_Tabla.jpg" alt="Vera+ mini" onclick="changeImage(this.src)" />
             </div>
         </div>
-    </section>
 
-    <!-- Newsletter Section -->
-    <section class="newsletter-section">
-        <div class="container newsletter-content">
-            <h2>¡Mantente al día con Fuxion!</h2>
-            <p>Suscríbete a nuestro boletín para recibir las últimas noticias, ofertas y consejos de salud.</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Tu correo electrónico" required>
-                <button type="submit" class="btn btn-primary">Suscribirse</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>FUXION</h3>
-                    <p>Transformando vidas a través de la nutrición y el bienestar integral.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Enlaces Rápidos</h4>
-                    <ul>
-                        <li><a href="../inicio/">Inicio</a></li>
-                        <li><a href="../productos/">Productos</a></li>
-                        <li><a href="../catalogo/">Catálogo</a></li>
-                        <li><a href="../contacto/">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contacto</h4>
-                    <p><i class="fas fa-phone"></i> +51 934 498 803</p>
-                    <p><i class="fas fa-envelope"></i> info@fuxion.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Lima, Perú</p>
-                </div>
+        <div class="product-info">
+          <h1>Vera+</h1>
+          <div class="product-rating">
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Fuxion. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
+            <span>(65 reseñas)</span>
+          </div>
 
-    <script src="../script.js"></script>
+          <div class="product-price"><span class="current-price">S/ 169.00</span></div>
+
+          <div class="product-description">
+            <p>Bebida de aloe vera para la salud digestiva, la desinflamación y el cuidado de la piel.</p>
+          </div>
+
+          <div class="product-benefits">
+            <h3>Beneficios Clave:</h3>
+            <ul>
+              <li><i class="fas fa-check"></i> Mejora la salud digestiva.</li>
+              <li><i class="fas fa-check"></i> Ayuda a desinflamar.</li>
+              <li><i class="fas fa-check"></i> Contribuye a una piel saludable.</li>
+              <li><i class="fas fa-check"></i> Apoya la cicatrización.</li>
+            </ul>
+          </div>
+
+          <div class="product-specs">
+            <h3>Especificaciones:</h3>
+            <ul>
+              <li><strong>Precio:</strong> S/ 169.00</li>
+              <li><strong>Puntos:</strong> 26 puntos</li>
+            </ul>
+          </div>
+
+          <div class="product-ingredients">
+            <h3>Ingredientes Principales:</h3>
+            <ul>
+              <li>Aloe Vera</li>
+              <li>Vitaminas y Minerales</li>
+              <li>Extractos herbales</li>
+            </ul>
+          </div>
+
+          <div class="product-usage">
+            <h3>Modo de Uso:</h3>
+            <p>Disolver un stick en un vaso de agua y consumir una vez al día, preferiblemente antes de las comidas.</p>
+          </div>
+
+          <div class="product-actions">
+            <button class="btn btn-primary btn-large" onclick="comprarWhatsApp('Vera+', '115.00')">
+              <i class="fab fa-whatsapp"></i> Comprar Ahora
+            </button>
+            <button class="btn btn-secondary btn-large">
+              <i class="fas fa-heart"></i> Agregar a Favoritos
+            </button>
+          </div>
+
+          <div class="product-guarantee">
+            <div class="guarantee-item">
+              <i class="fas fa-shield-alt"></i>
+              <span>Garantía de calidad</span>
+            </div>
+            <div class="guarantee-item">
+              <i class="fas fa-truck"></i>
+              <span>Envío gratis en compras mayores a S/ 150</span>
+            </div>
+            <div class="guarantee-item">
+              <i class="fas fa-undo"></i>
+              <span>30 días para devoluciones</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Tabs -->
+  <section class="product-tabs">
+    <div class="container">
+      <div class="tabs-header">
+        <button class="tab-btn active" onclick="openTab(event, 'description')">Descripción Detallada</button>
+        <button class="tab-btn" onclick="openTab(event, 'reviews')">Reseñas</button>
+      </div>
+
+      <div id="description" class="tab-content active">
+        <h3>Descripción Completa de Vera+</h3>
+        <p>Delicioso té de menta con Aloe Vera (sábila) y enriquecido con las fórmulas patentadas Wellmune WGP y OliActive, creado por FuXion para reforzar tu sistema inmunológico, proteger el sistema respiratorio y prevenir alergias.
+
+Fusión Nutracéutica: Extracto de Aloe Vera (sábila) + Wellmune WGP (betaglucanos) + Amalaki + Extracto de Hojas de Oliva (Oliactive) + Vitamina C + Mix de Aminoácidos (L-Cisteína, Glicina, L-Glutamina) + BioFerrín
+
+Combinación herbal que fortalece la inmunidad general y complementa la nutrición para reforzar la salud. Su fórmula enriquecida con Wellmune, te ayudará a:
+
+Aumentar la resistencia a las enfermedades, principalmente las respiratorias estacionales como alergias, gripe, influenza y asma.
+Reducir la viscosidad de las secreciones bronquiales, facilitando su eliminación.
+Elevar el poder antioxidante de las células del sistema respiratorio.</p>
+        <img src="https://aware-backend.s3.amazonaws.com/media/product/img/Vera_RGQP5zL.png" alt="Vera+ detalle" style="width:100%; max-width:600px; display:block; margin:2rem auto;" />
+      </div>
+
+      <div id="reviews" class="tab-content">
+        <h3>Reseñas de Clientes</h3>
+        <div class="reviews-summary">
+          <div class="rating-overview">
+            <div class="overall-rating">
+              <span class="rating-number">5.0</span>
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="total-reviews">65 reseñas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reviews-list">
+          <div class="review-item">
+            <div class="review-header">
+              <div class="reviewer-name">Lucía Torres</div>
+              <div class="review-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p>"Lo tomo antes de almorzar y he sentido gran alivio en mi digestión. Además, ¡mi piel se ve mucho mejor!"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>FUXION</h3>
+          <p>Transformando vidas a través de la nutrición y el bienestar integral.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Enlaces Rápidos</h4>
+          <ul>
+            <li><a href="../inicio/">Inicio</a></li>
+            <li><a href="../productos/">Productos</a></li>
+            <li><a href="../catalogo/">Catálogo</a></li>
+            <li><a href="../contacto/">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contacto</h4>
+          <p><i class="fas fa-phone"></i> +51 934 498 803</p>
+          <p><i class="fas fa-envelope"></i> info@fuxion.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> Lima, Perú</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Fuxion. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
 </body>
 </html>

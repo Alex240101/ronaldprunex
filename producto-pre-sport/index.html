@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pre Sport - Fuxion</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
     <!-- Header -->
@@ -30,58 +30,191 @@
         </nav>
     </header>
 
-    <!-- Product Detail Section -->
-    <section class="product-detail-section">
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav>
+                <a href="../inicio/">Inicio</a> &gt; 
+                <a href="../productos/">Productos</a> &gt; 
+                <span>Pre Sport</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Product Detail -->
+    <section class="product-detail">
         <div class="container">
             <div class="product-detail-grid">
-                <div class="product-detail-image">
-                    <img src="/placeholder.svg?height=500&width=500" alt="Pre Sport">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="mainImage" src="https://aware-backend.s3.amazonaws.com/media/product/img/Pre_Sport_Caja.png" alt="Pre Sport" />
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img/Pre_Sport_Caja.png" alt="Pre Sport Vista 1" onclick="changeImage(this.src)" />
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img/PreSport_Per%C3%BA.png" alt="Pre Sport Vista 2" onclick="changeImage(this.src)" />
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img2/PreSport_Tabla_N83c94R.jpg" alt="Pre Sport Vista 3" onclick="changeImage(this.src)" />
+                    </div>
                 </div>
-                <div class="product-detail-info">
+
+                <div class="product-info">
                     <h1>Pre Sport</h1>
-                    <p class="product-price">S/ 160.00</p>
-                    <p class="product-description">Bebida pre-entrenamiento con creatina, aminoácidos y electrolitos para aumentar la energía, resistencia y rendimiento deportivo.</p>
-                    
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span>(27 reseñas)</span>
+                    </div>
+
+                    <div class="product-price">
+                        <span class="current-price">S/ 143.00</span>
+                    </div>
+
+                    <div class="product-description">
+                        <p>Bebida pre-entrenamiento con creatina, aminoácidos y electrolitos para aumentar la energía, resistencia y rendimiento deportivo.</p>
+                    </div>
+
                     <div class="product-benefits">
                         <h3>Beneficios Clave:</h3>
                         <ul>
-                            <li>Aumenta la energía y resistencia.</li>
-                            <li>Mejora el rendimiento deportivo.</li>
-                            <li>Reduce la fatiga muscular.</li>
-                            <li>Favorece la hidratación.</li>
+                            <li><i class="fas fa-check"></i> Aumenta la energía y resistencia.</li>
+                            <li><i class="fas fa-check"></i> Mejora el rendimiento deportivo.</li>
+                            <li><i class="fas fa-check"></i> Reduce la fatiga muscular.</li>
+                            <li><i class="fas fa-check"></i> Favorece la hidratación.</li>
                         </ul>
                     </div>
 
-                    <div class="product-ingredients">
-                        <h3>Ingredientes Principales:</h3>
+                    <div class="product-specs">
+                        <h3>Especificaciones:</h3>
                         <ul>
-                            <li>Creatina</li>
-                            <li>Aminoácidos (BCAAs)</li>
-                            <li>Electrolitos</li>
-                            <li>Vitaminas del Complejo B</li>
+                            <li><strong>Precio:</strong> S/ 143.00</li>
+                            <li><strong>Puntos:</strong> 22 puntos</li>
                         </ul>
                     </div>
 
-                    <div class="product-usage">
-                        <h3>Modo de Uso:</h3>
-                        <p>Disolver un stick en un vaso de agua y consumir 20-30 minutos antes del ejercicio.</p>
+                    <div class="ingredients-detailed">
+                        <h3>Ingredientes Principales:</h3>
+                        <div class="ingredients-grid">
+                            <div class="ingredient-card">
+                                <h4>Creatina</h4>
+                                <p>Incrementa la fuerza y energía muscular.</p>
+                            </div>
+                            <div class="ingredient-card">
+                                <h4>Aminoácidos (BCAAs)</h4>
+                                <p>Apoyan la recuperación y reducen el daño muscular.</p>
+                            </div>
+                            <div class="ingredient-card">
+                                <h4>Electrolitos</h4>
+                                <p>Mejoran la hidratación y el equilibrio de minerales.</p>
+                            </div>
+                            <div class="ingredient-card">
+                                <h4>Vitaminas del Complejo B</h4>
+                                <p>Contribuyen al metabolismo energético.</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <button class="btn btn-primary" onclick="comprarWhatsApp('Pre Sport', '160.00')">Comprar por WhatsApp</button>
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-large" onclick="comprarWhatsApp('Pre Sport', '160.00')">
+                            <i class="fab fa-whatsapp"></i> Comprar Ahora
+                        </button>
+                        <button class="btn btn-secondary btn-large">
+                            <i class="fas fa-heart"></i> Agregar a Favoritos
+                        </button>
+                    </div>
+
+                    <div class="product-guarantee">
+                        <div class="guarantee-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Garantía de calidad</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-truck"></i>
+                            <span>Envío gratis en compras mayores a S/ 150</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-undo"></i>
+                            <span>30 días para devoluciones</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <section class="newsletter-section">
-        <div class="container newsletter-content">
-            <h2>¡Mantente al día con Fuxion!</h2>
-            <p>Suscríbete a nuestro boletín para recibir las últimas noticias, ofertas y consejos de salud.</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Tu correo electrónico" required>
-                <button type="submit" class="btn btn-primary">Suscribirse</button>
-            </form>
+    <!-- Product Tabs -->
+    <section class="product-tabs">
+        <div class="container">
+            <div class="tabs-header">
+                <button class="tab-btn active" onclick="openTab(event, 'description')">Descripción Detallada</button>
+                <button class="tab-btn" onclick="openTab(event, 'reviews')">Reseñas</button>
+            </div>
+
+            <div id="description" class="tab-content active">
+                <h3>Descripción Completa de Pre Sport</h3>
+                <p><strong>Pre Sport</strong> es una bebida diseñada para mejorar tu rendimiento deportivo y resistencia, con ingredientes clave para darte la energía que necesitas.</p>
+                <p>Ayuda a reducir la fatiga muscular y mejora la hidratación durante el ejercicio intenso.</p>
+
+                <h4>Beneficios adicionales:</h4>
+                <ul>
+                    <li>Incrementa la fuerza y resistencia muscular.</li>
+                    <li>Favorece la recuperación post entrenamiento.</li>
+                    <li>Mejora el equilibrio electrolítico.</li>
+                </ul>
+                <img src="https://aware-backend.s3.amazonaws.com/media/product/img/Pre_Sport_Caja.png" alt="Flyer Pre Sport" style="width:100%; max-width: 600px; display: block; margin: 2rem auto;" />
+            </div>
+
+            <div id="reviews" class="tab-content" style="display:none;">
+                <h3>Reseñas de Clientes</h3>
+                <div class="reviews-summary">
+                    <div class="rating-overview">
+                        <div class="overall-rating">
+                            <span class="rating-number">4.7</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="total-reviews">27 reseñas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews-list">
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-name">Carlos García</div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p>"Pre Sport me da la energía que necesito para mis entrenamientos intensos."</p>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-name">Ana Ruiz</div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <p>"Me ayuda a mantener la concentración y no sentir fatiga rápidamente."</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -119,6 +252,27 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
+        }
+        function openTab(evt, tabName) {
+            let i, tabcontent, tabbuttons;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tabbuttons = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
 
     <script src="../script.js"></script>
 </body>

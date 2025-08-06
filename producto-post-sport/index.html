@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Post Sport - Fuxion</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
     <!-- Header -->
@@ -30,36 +30,91 @@
         </nav>
     </header>
 
-    <!-- Product Detail Section -->
-    <section class="product-detail-section">
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav>
+                <a href="../inicio/">Inicio</a> &gt; 
+                <a href="../productos/">Productos</a> &gt; 
+                <span>Post Sport</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Product Detail -->
+    <section class="product-detail">
         <div class="container">
             <div class="product-detail-grid">
-                <div class="product-detail-image">
-                    <img src="/placeholder.svg?height=500&width=500" alt="Post Sport">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="mainImage" src="https://aware-backend.s3.amazonaws.com/media/product/img/Post_sport_Caja.png" alt="Post Sport" />
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img/Post_sport_Caja.png" alt="Post Sport Vista 1" onclick="changeImage(this.src)" />
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img/Post_Sport_Flyer.png" alt="Post Sport Vista 2" onclick="changeImage(this.src)" />
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img2/Post_Sport_Tabla_0Z2XaaW.jpg" alt="Post Sport Vista 3" onclick="changeImage(this.src)" />
+                    </div>
                 </div>
-                <div class="product-detail-info">
+
+                <div class="product-info">
                     <h1>Post Sport</h1>
-                    <p class="product-price">S/ 165.00</p>
-                    <p class="product-description">Bebida post-entrenamiento con proteínas, aminoácidos y carbohidratos para la recuperación y el crecimiento muscular.</p>
-                    
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span>(28 reseñas)</span>
+                    </div>
+
+                    <div class="product-price">
+                        <span class="current-price">S/ 143.00</span>
+                    </div>
+
+                    <div class="product-description">
+                        <p>Bebida post-entrenamiento con proteínas, aminoácidos y carbohidratos para la recuperación y el crecimiento muscular.</p>
+                    </div>
+
                     <div class="product-benefits">
                         <h3>Beneficios Clave:</h3>
                         <ul>
-                            <li>Acelera la recuperación muscular.</li>
-                            <li>Promueve el crecimiento muscular.</li>
-                            <li>Repone las reservas de glucógeno.</li>
-                            <li>Reduce el catabolismo muscular.</li>
+                            <li><i class="fas fa-check"></i> Acelera la recuperación muscular.</li>
+                            <li><i class="fas fa-check"></i> Promueve el crecimiento muscular.</li>
+                            <li><i class="fas fa-check"></i> Repone las reservas de glucógeno.</li>
+                            <li><i class="fas fa-check"></i> Reduce el catabolismo muscular.</li>
                         </ul>
                     </div>
 
-                    <div class="product-ingredients">
-                        <h3>Ingredientes Principales:</h3>
+                    <div class="product-specs">
+                        <h3>Especificaciones:</h3>
                         <ul>
-                            <li>Proteína de Suero</li>
-                            <li>Aminoácidos (BCAAs, Glutamina)</li>
-                            <li>Carbohidratos de rápida absorción</li>
-                            <li>Vitaminas y Minerales</li>
+                            <li><strong>Precio:</strong> S/ 143.00</li>
+                            <li><strong>Puntos:</strong> 22 puntos</li>
                         </ul>
+                    </div>
+
+                    <div class="ingredients-detailed">
+                        <h3>Ingredientes Principales:</h3>
+                        <div class="ingredients-grid">
+                            <div class="ingredient-card">
+                                <h4>Proteína de Suero</h4>
+                                <p>Favorece la reparación y crecimiento muscular.</p>
+                            </div>
+                            <div class="ingredient-card">
+                                <h4>Aminoácidos (BCAAs, Glutamina)</h4>
+                                <p>Apoyan la recuperación y disminuyen fatiga.</p>
+                            </div>
+                            <div class="ingredient-card">
+                                <h4>Carbohidratos de rápida absorción</h4>
+                                <p>Repone energía y glucógeno muscular.</p>
+                            </div>
+                            <div class="ingredient-card">
+                                <h4>Vitaminas y Minerales</h4>
+                                <p>Contribuyen al bienestar general y salud muscular.</p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="product-usage">
@@ -67,21 +122,104 @@
                         <p>Disolver un stick en un vaso de agua o leche y consumir inmediatamente después del ejercicio.</p>
                     </div>
 
-                    <button class="btn btn-primary" onclick="comprarWhatsApp('Post Sport', '165.00')">Comprar por WhatsApp</button>
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-large" onclick="comprarWhatsApp('Post Sport', '165.00')">
+                            <i class="fab fa-whatsapp"></i> Comprar Ahora
+                        </button>
+                        <button class="btn btn-secondary btn-large">
+                            <i class="fas fa-heart"></i> Agregar a Favoritos
+                        </button>
+                    </div>
+
+                    <div class="product-guarantee">
+                        <div class="guarantee-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Garantía de calidad</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-truck"></i>
+                            <span>Envío gratis en compras mayores a S/ 150</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-undo"></i>
+                            <span>30 días para devoluciones</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <section class="newsletter-section">
-        <div class="container newsletter-content">
-            <h2>¡Mantente al día con Fuxion!</h2>
-            <p>Suscríbete a nuestro boletín para recibir las últimas noticias, ofertas y consejos de salud.</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Tu correo electrónico" required>
-                <button type="submit" class="btn btn-primary">Suscribirse</button>
-            </form>
+    <!-- Product Tabs -->
+    <section class="product-tabs">
+        <div class="container">
+            <div class="tabs-header">
+                <button class="tab-btn active" onclick="openTab(event, 'description')">Descripción Detallada</button>
+                <button class="tab-btn" onclick="openTab(event, 'reviews')">Reseñas</button>
+            </div>
+
+            <div id="description" class="tab-content active">
+                <h3>Descripción Completa de Post Sport</h3>
+                <p><strong>Post Sport</strong> es una bebida diseñada para optimizar la recuperación post-entrenamiento con una fórmula rica en proteínas, aminoácidos y carbohidratos.</p>
+                <p>Ayuda a acelerar la reparación muscular y reponer las reservas energéticas.</p>
+
+                <h4>Beneficios adicionales:</h4>
+                <ul>
+                    <li>Favorece el crecimiento y reparación muscular.</li>
+                    <li>Disminuye la fatiga y el catabolismo.</li>
+                    <li>Mejora la reposición energética post ejercicio.</li>
+                </ul>
+                <img src="https://aware-backend.s3.amazonaws.com/media/product/img/Post_sport_Caja.png" alt="Flyer Post Sport" style="width:100%; max-width: 600px; display: block; margin: 2rem auto;" />
+            </div>
+
+            <div id="reviews" class="tab-content">
+                <h3>Reseñas de Clientes</h3>
+                <div class="reviews-summary">
+                    <div class="rating-overview">
+                        <div class="overall-rating">
+                            <span class="rating-number">4.7</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="total-reviews">28 reseñas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews-list">
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-name">Carla Ruiz</div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p>"Excelente producto para recuperarme tras entrenar, resultados visibles."</p>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-name">Andrés Gómez</div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <p>"Buen sabor y buena recuperación, lo recomiendo."</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -119,6 +257,30 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
+        }
+        function openTab(evt, tabName) {
+            let i, tabcontent, tabbuttons;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tabbuttons = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        function comprarWhatsApp(producto, precio) {
+            const url = `https://wa.me/51934498803?text=Hola,%20quiero%20comprar%20el%20producto%20${encodeURIComponent(producto)}%20con%20precio%20S/%20${encodeURIComponent(precio)}`;
+            window.open(url, '_blank');
+        }
+    </script>
 
     <script src="../script.js"></script>
 </body>

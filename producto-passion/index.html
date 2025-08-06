@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Passion - Fuxion</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
     <!-- Header -->
@@ -17,7 +17,7 @@
                 </div>
                 <ul class="nav-menu">
                     <li><a href="../inicio/" class="nav-link">Inicio</a></li>
-                    <li><a href="../productos/" class="nav-link active">Productos</a></li>
+                    <li><a href="../productos/" class="nav-link">Productos</a></li>
                     <li><a href="../catalogo/" class="nav-link">Catálogo</a></li>
                     <li><a href="../contacto/" class="nav-link">Contacto</a></li>
                 </ul>
@@ -30,58 +30,196 @@
         </nav>
     </header>
 
-    <!-- Product Detail Section -->
-    <section class="product-detail-section">
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav>
+                <a href="../inicio/">Inicio</a> &gt; 
+                <a href="../productos/">Productos</a> &gt; 
+                <span>Passion</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Product Detail -->
+    <section class="product-detail">
         <div class="container">
             <div class="product-detail-grid">
-                <div class="product-detail-image">
-                    <img src="/placeholder.svg?height=500&width=500" alt="Passion">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="mainImage" src="https://aware-backend.s3.amazonaws.com/media/product/img/Passion.png" alt="Passion" />
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img/Passion.png" alt="Passion Vista 1" onclick="changeImage(this.src)" />
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img/Passion_Flyer_cWCVeZ8.png" alt="Passion Vista 2" onclick="changeImage(this.src)" />
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img2/IN_PE_6315_ES_01022024_163132.jpg" alt="Passion Vista 3" onclick="changeImage(this.src)" />
+                    </div>
                 </div>
-                <div class="product-detail-info">
+
+                <div class="product-info">
                     <h1>Passion</h1>
-                    <p class="product-price">S/ 145.00</p>
-                    <p class="product-description">Bebida con L-arginina, maca y vitaminas para mejorar la vitalidad, el deseo y el rendimiento físico.</p>
-                    
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span>(89 reseñas)</span>
+                    </div>
+
+                    <div class="product-price">
+                        <span class="current-price">S/ 129.50</span>
+                    </div>
+
+                    <div class="product-description">
+                        <p>Bebida con L-arginina, maca y vitaminas para mejorar la vitalidad, el deseo y el rendimiento físico.</p>
+                    </div>
+
+                    <div class="nutrition-table">
+                        <h3>Información Nutricional</h3>
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img2/IN_PE_6315_ES_01022024_163132.jpg" alt="Tabla Nutricional Passion" style="width:100%; max-width: 400px; display: block; margin: 1rem auto;" />
+                        <p class="text-center"><em>*Imagen de referencia de la tabla nutricional.</em></p>
+                    </div>
+
                     <div class="product-benefits">
                         <h3>Beneficios Clave:</h3>
                         <ul>
-                            <li>Mejora la vitalidad y energía.</li>
-                            <li>Aumenta el deseo.</li>
-                            <li>Contribuye al rendimiento físico.</li>
-                            <li>Apoya la circulación.</li>
+                            <li><i class="fas fa-check"></i> Mejora la vitalidad y energía.</li>
+                            <li><i class="fas fa-check"></i> Aumenta el deseo.</li>
+                            <li><i class="fas fa-check"></i> Contribuye al rendimiento físico.</li>
+                            <li><i class="fas fa-check"></i> Apoya la circulación.</li>
                         </ul>
                     </div>
 
-                    <div class="product-ingredients">
-                        <h3>Ingredientes Principales:</h3>
+                    <div class="product-specs">
+                        <h3>Especificaciones:</h3>
                         <ul>
-                            <li>L-Arginina</li>
-                            <li>Maca</li>
-                            <li>Ginseng</li>
-                            <li>Vitaminas del Complejo B</li>
+                            <li><strong>Precio:</strong> S/ 129.50</li>
+                            <li><strong>Puntos:</strong> 20 puntos</li>
                         </ul>
                     </div>
 
-                    <div class="product-usage">
-                        <h3>Modo de Uso:</h3>
-                        <p>Disolver un stick en un vaso de agua y consumir una vez al día, preferiblemente por la mañana.</p>
+                    <div class="ingredients-detailed">
+                        <h3>Ingredientes Principales:</h3>
+                        <div class="ingredients-grid">
+                            <div class="ingredient-card">
+                                <h4>L-Arginina</h4>
+                                <p>Mejora el flujo sanguíneo y la vitalidad.</p>
+                            </div>
+                            <div class="ingredient-card">
+                                <h4>Maca</h4>
+                                <p>Incrementa el deseo sexual y energía.</p>
+                            </div>
+                            <div class="ingredient-card">
+                                <h4>Ginseng</h4>
+                                <p>Potenciador natural del rendimiento físico.</p>
+                            </div>
+                            <div class="ingredient-card">
+                                <h4>Vitaminas del Complejo B</h4>
+                                <p>Apoya el metabolismo y bienestar general.</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <button class="btn btn-primary" onclick="comprarWhatsApp('Passion', '145.00')">Comprar por WhatsApp</button>
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-large" onclick="comprarWhatsApp('Passion', '145.00')">
+                            <i class="fab fa-whatsapp"></i> Comprar Ahora
+                        </button>
+                        <button class="btn btn-secondary btn-large">
+                            <i class="fas fa-heart"></i> Agregar a Favoritos
+                        </button>
+                    </div>
+
+                    <div class="product-guarantee">
+                        <div class="guarantee-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Garantía de calidad</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-truck"></i>
+                            <span>Envío gratis en compras mayores a S/ 150</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-undo"></i>
+                            <span>30 días para devoluciones</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <section class="newsletter-section">
-        <div class="container newsletter-content">
-            <h2>¡Mantente al día con Fuxion!</h2>
-            <p>Suscríbete a nuestro boletín para recibir las últimas noticias, ofertas y consejos de salud.</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Tu correo electrónico" required>
-                <button type="submit" class="btn btn-primary">Suscribirse</button>
-            </form>
+    <!-- Product Tabs -->
+    <section class="product-tabs">
+        <div class="container">
+            <div class="tabs-header">
+                <button class="tab-btn active" onclick="openTab(event, 'description')">Descripción Detallada</button>
+                <button class="tab-btn" onclick="openTab(event, 'reviews')">Reseñas</button>
+            </div>
+
+            <div id="description" class="tab-content active">
+                <h3>Descripción Completa de Passion</h3>
+                <p><strong>Bebida energizante</strong> con ingredientes naturales para mejorar la vitalidad y el rendimiento físico.</p>
+                <p>Contiene L-arginina, maca, ginseng y vitaminas del complejo B, apoyando la circulación y la energía diaria.</p>
+
+                <h4>Beneficios adicionales:</h4>
+                <ul>
+                    <li>Mejora el deseo y la energía física.</li>
+                    <li>Contribuye a un mejor rendimiento deportivo y vitalidad.</li>
+                </ul>
+                <img src="https://aware-backend.s3.amazonaws.com/media/product/img/Passion.png" alt="Flyer Passion" style="width:100%; max-width: 600px; display: block; margin: 2rem auto;" />
+            </div>
+
+            <div id="reviews" class="tab-content">
+                <h3>Reseñas de Clientes</h3>
+                <div class="reviews-summary">
+                    <div class="rating-overview">
+                        <div class="overall-rating">
+                            <span class="rating-number">4.7</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="total-reviews">89 reseñas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews-list">
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-name">Sofía Martínez</div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p>"Passion ha aumentado mi energía y vitalidad diaria. Muy recomendable."</p>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-name">Miguel Torres</div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p>"Buen producto, me ha ayudado en mi rendimiento físico."</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -119,6 +257,27 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
+        }
+        function openTab(evt, tabName) {
+            let i, tabcontent, tabbuttons;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tabbuttons = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
 
     <script src="../script.js"></script>
 </body>

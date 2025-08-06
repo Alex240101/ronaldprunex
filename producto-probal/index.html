@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Probal - Fuxion</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
     <!-- Header -->
@@ -17,7 +17,7 @@
                 </div>
                 <ul class="nav-menu">
                     <li><a href="../inicio/" class="nav-link">Inicio</a></li>
-                    <li><a href="../productos/" class="nav-link active">Productos</a></li>
+                    <li><a href="../productos/" class="nav-link">Productos</a></li>
                     <li><a href="../catalogo/" class="nav-link">Catálogo</a></li>
                     <li><a href="../contacto/" class="nav-link">Contacto</a></li>
                 </ul>
@@ -30,58 +30,207 @@
         </nav>
     </header>
 
-    <!-- Product Detail Section -->
-    <section class="product-detail-section">
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav>
+                <a href="../inicio/">Inicio</a> &gt; 
+                <a href="../productos/">Productos</a> &gt; 
+                <span>Probal</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Product Detail -->
+    <section class="product-detail">
         <div class="container">
             <div class="product-detail-grid">
-                <div class="product-detail-image">
-                    <img src="/placeholder.svg?height=500&width=500" alt="Probal">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="mainImage" src="https://aware-backend.s3.amazonaws.com/media/product/img/Probal.png" alt="Probal" />
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img/Probal.png" alt="Probal Vista 1" onclick="changeImage(this.src)" />
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img/Probal_Flyer_cQfe8P1.png" alt="Probal Vista 2" onclick="changeImage(this.src)" />
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img2/Probal_Tabla.jpg" alt="Probal Vista 3" onclick="changeImage(this.src)" />
+                    </div>
                 </div>
-                <div class="product-detail-info">
+
+                <div class="product-info">
                     <h1>Probal</h1>
-                    <p class="product-price">S/ 175.00</p>
-                    <p class="product-description">Batido de proteína para el equilibrio hormonal, la salud femenina y el bienestar general.</p>
-                    
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span>(85 reseñas)</span>
+                    </div>
+
+                    <div class="product-price">
+                        <span class="current-price">S/ 162.50</span>
+                    </div>
+
+                    <div class="product-description">
+                        <p>Batido de proteína para el equilibrio hormonal, la salud femenina y el bienestar general.</p>
+                    </div>
+
+                    <div class="nutrition-table">
+                        <h3>Información Nutricional</h3>
+                        <img src="https://aware-backend.s3.amazonaws.com/media/product/img2/Probal_Tabla.jpg" alt="Tabla Nutricional Probal" style="width:100%; max-width: 400px; display: block; margin: 1rem auto;" />
+                        <p class="text-center"><em>*Imagen de referencia de la tabla nutricional.</em></p>
+                    </div>
+
                     <div class="product-benefits">
-                        <h3>Beneficios Clave:</h3>
+                        <h3>Beneficios Principales:</h3>
                         <ul>
-                            <li>Contribuye al equilibrio hormonal.</li>
-                            <li>Apoya la salud femenina.</li>
-                            <li>Fortalece huesos y músculos.</li>
-                            <li>Mejora el bienestar general.</li>
+                            <li><i class="fas fa-check"></i> Contribuye al equilibrio hormonal.</li>
+                            <li><i class="fas fa-check"></i> Apoya la salud femenina.</li>
+                            <li><i class="fas fa-check"></i> Fortalece huesos y músculos.</li>
+                            <li><i class="fas fa-check"></i> Mejora el bienestar general.</li>
                         </ul>
                     </div>
 
-                    <div class="product-ingredients">
-                        <h3>Ingredientes Principales:</h3>
+                    <div class="product-specs">
+                        <h3>Especificaciones:</h3>
                         <ul>
-                            <li>Proteína de Soya</li>
-                            <li>Isoflavonas</li>
-                            <li>Vitaminas y Minerales</li>
-                            <li>Extractos herbales</li>
+                            <li><strong>Precio:</strong> S/ 162.50</li>
+                            <li><strong>Puntos:</strong> 25 puntos</li>
                         </ul>
                     </div>
 
-                    <div class="product-usage">
-                        <h3>Modo de Uso:</h3>
-                        <p>Disolver un stick en un vaso de agua o leche vegetal y consumir una vez al día.</p>
+                    <div class="ingredients-detailed">
+                        <h3>Ingredientes Destacados:</h3>
+                        <div class="ingredients-grid">
+                            <div class="ingredient-card">
+                                <h4>Proteína de Soya</h4>
+                                <p>Fuente de proteína vegetal para soporte muscular y hormonal.</p>
+                            </div>
+                            <div class="ingredient-card">
+                                <h4>Isoflavonas</h4>
+                                <p>Compuestos naturales que ayudan en el equilibrio hormonal femenino.</p>
+                            </div>
+                            <div class="ingredient-card">
+                                <h4>Vitaminas y Minerales</h4>
+                                <p>Apoyo integral para la salud general y bienestar.</p>
+                            </div>
+                            <div class="ingredient-card">
+                                <h4>Extractos Herbales</h4>
+                                <p>Mejoran la digestión y aportan antioxidantes.</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <button class="btn btn-primary" onclick="comprarWhatsApp('Probal', '175.00')">Comprar por WhatsApp</button>
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-large" onclick="comprarWhatsApp('Probal', '175.00')">
+                            <i class="fab fa-whatsapp"></i> Comprar Ahora
+                        </button>
+                        <button class="btn btn-secondary btn-large">
+                            <i class="fas fa-heart"></i> Agregar a Favoritos
+                        </button>
+                    </div>
+
+                    <div class="product-guarantee">
+                        <div class="guarantee-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Garantía de calidad</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-truck"></i>
+                            <span>Envío gratis en compras mayores a S/ 150</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-undo"></i>
+                            <span>30 días para devoluciones</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <section class="newsletter-section">
-        <div class="container newsletter-content">
-            <h2>¡Mantente al día con Fuxion!</h2>
-            <p>Suscríbete a nuestro boletín para recibir las últimas noticias, ofertas y consejos de salud.</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Tu correo electrónico" required>
-                <button type="submit" class="btn btn-primary">Suscribirse</button>
-            </form>
+    <!-- Product Tabs -->
+    <section class="product-tabs">
+        <div class="container">
+            <div class="tabs-header">
+                <button class="tab-btn active" onclick="openTab(event, 'description')">Descripción Detallada</button>
+                <button class="tab-btn" onclick="openTab(event, 'videos')">Videos</button>
+                <button class="tab-btn" onclick="openTab(event, 'reviews')">Reseñas</button>
+            </div>
+
+            <div id="description" class="tab-content active">
+                <h3>Descripción Completa de Probal</h3>
+                <p><strong>Batido nutricional</strong> que ayuda al equilibrio hormonal femenino, apoyando la salud integral y el bienestar general.</p>
+                <p>Contiene una mezcla de proteína de soya, isoflavonas, vitaminas y extractos herbales que fortalecen huesos y músculos.</p>
+
+                <h4>Beneficios adicionales:</h4>
+                <ul>
+                    <li>Promueve el bienestar hormonal y digestivo.</li>
+                    <li>Ayuda a mantener niveles saludables durante la edad adulta.</li>
+                </ul>
+                <img src="https://aware-backend.s3.amazonaws.com/media/product/img/Probal.png" alt="Flyer Probal" style="width:100%; max-width: 600px; display: block; margin: 2rem auto;" />
+            </div>
+
+            <div id="videos" class="tab-content">
+                <h3>Videos Informativos</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/example1" width="100%" height="362" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="video-container" style="margin-top: 2rem;">
+                    <iframe src="https://www.youtube.com/embed/example2" width="100%" height="362" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div id="reviews" class="tab-content">
+                <h3>Reseñas de Clientes</h3>
+                <div class="reviews-summary">
+                    <div class="rating-overview">
+                        <div class="overall-rating">
+                            <span class="rating-number">4.7</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="total-reviews">85 reseñas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews-list">
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-name">Ana López</div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p>"Excelente producto que ha mejorado mi bienestar y salud general."</p>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-name">José Martínez</div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <p>"Lo uso diariamente y he notado cambios muy positivos en mi salud."</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -120,6 +269,26 @@
         </div>
     </footer>
 
+    <script>
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
+        }
+        function openTab(evt, tabName) {
+            let i, tabcontent, tabbuttons;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tabbuttons = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
     <script src="../script.js"></script>
 </body>
 </html>

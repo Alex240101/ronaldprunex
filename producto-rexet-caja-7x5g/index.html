@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Rexet Caja 7x5g - Fuxion</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
     <!-- Header -->
@@ -30,58 +30,224 @@
         </nav>
     </header>
 
-    <!-- Product Detail Section -->
-    <section class="product-detail-section">
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav>
+                <a href="../inicio/">Inicio</a> &gt;
+                <a href="../productos/">Productos</a> &gt;
+                <span>Rexet Caja 7x5g</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Product Detail -->
+    <section class="product-detail">
         <div class="container">
             <div class="product-detail-grid">
-                <div class="product-detail-image">
-                    <img src="/placeholder.svg?height=500&width=500" alt="Rexet Caja 7x5g">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img
+                          id="mainImage"
+                          src="https://aware-backend.s3.amazonaws.com/media/product/img/Rexet_K395eY5.png"
+                          alt="Rexet Caja 7x5g"
+                        />
+                    </div>
+                    <div class="thumbnail-images">
+                        <img
+                          src="https://aware-backend.s3.amazonaws.com/media/product/img/Rexet_K395eY5.png"
+                          alt="Vista 1"
+                          onclick="changeImage(this.src)"
+                        />
+                        <img
+                          src="https://aware-backend.s3.amazonaws.com/media/product/img/Rexet_Flyer_BeomGa3.png"
+                          alt="Vista 2"
+                          onclick="changeImage(this.src)"
+                        />
+                        <img
+                          src="https://aware-backend.s3.amazonaws.com/media/product/img2/Rexet_Tabla_x9J2DkO.jpg"
+                          alt="Vista 3"
+                          onclick="changeImage(this.src)"
+                        />
+                    </div>
                 </div>
-                <div class="product-detail-info">
+
+                <div class="product-info">
                     <h1>Rexet Caja 7x5g</h1>
-                    <p class="product-price">S/ 129.50</p>
-                    <p class="product-description">Rexet en formato de caja con 7 sobres individuales, ideal para proteger y desintoxicar el hígado de forma práctica.</p>
-                    
+
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span>(15 reseñas)</span>
+                    </div>
+
+                    <div class="product-price">
+                        <span class="current-price">S/ 36.50</span>
+                    </div>
+
+                    <div class="product-description">
+                        <p>
+                            Rexet en formato de caja con 7 sobres individuales, ideal para proteger y desintoxicar el hígado de forma práctica.
+                        </p>
+                    </div>
+
                     <div class="product-benefits">
                         <h3>Beneficios Clave:</h3>
                         <ul>
-                            <li>Protege y desintoxica el hígado.</li>
-                            <li>Mejora la digestión.</li>
-                            <li>Propiedades antioxidantes.</li>
-                            <li>Formato práctico para llevar.</li>
+                            <li><i class="fas fa-check"></i> Protege y desintoxica el hígado.</li>
+                            <li><i class="fas fa-check"></i> Mejora la digestión.</li>
+                            <li><i class="fas fa-check"></i> Propiedades antioxidantes.</li>
+                            <li><i class="fas fa-check"></i> Formato práctico para llevar.</li>
                         </ul>
                     </div>
 
-                    <div class="product-ingredients">
-                        <h3>Ingredientes Principales:</h3>
+                    <div class="product-specs">
+                        <h3>Especificaciones:</h3>
                         <ul>
-                            <li>Extracto de Alcachofa</li>
-                            <li>Clorofila</li>
-                            <li>Aminoácidos (L-Metionina, L-Cisteína)</li>
-                            <li>Vitaminas del Complejo B</li>
+                            <li><strong>Precio:</strong> S/ 36.50</li>
+                            <li><strong>Presentación:</strong> Caja con 7 sobres de 5g</li>
+                            <li><strong>Puntos:</strong> 5 Puntos</li>
+
                         </ul>
                     </div>
 
-                    <div class="product-usage">
-                        <h3>Modo de Uso:</h3>
-                        <p>Disolver un sobre en un vaso de agua y consumir una vez al día, preferiblemente por la mañana.</p>
+                    <div class="ingredients-detailed">
+                        <h3>Ingredientes Principales:</h3>
+                        <div class="ingredients-grid">
+                            <div class="ingredient-card">
+                                <h4>Extracto de Alcachofa</h4>
+                                <p>Ayuda a proteger y limpiar el hígado.</p>
+                            </div>
+                            <div class="ingredient-card">
+                                <h4>Clorofila</h4>
+                                <p>Con propiedades antioxidantes naturales.</p>
+                            </div>
+                            <div class="ingredient-card">
+                                <h4>Aminoácidos</h4>
+                                <p>L-Metionina y L-Cisteína para la función hepática.</p>
+                            </div>
+                            <div class="ingredient-card">
+                                <h4>Vitaminas del Complejo B</h4>
+                                <p>Apoyo integral para la salud hepática.</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <button class="btn btn-primary" onclick="comprarWhatsApp('Rexet Caja 7x5g', '129.50')">Comprar por WhatsApp</button>
+                    <div class="product-actions">
+                        <button
+                          class="btn btn-primary btn-large"
+                          onclick="comprarWhatsApp('Rexet Caja 7x5g', '129.50')"
+                        >
+                            <i class="fab fa-whatsapp"></i> Comprar Ahora
+                        </button>
+                        <button class="btn btn-secondary btn-large">
+                            <i class="fas fa-heart"></i> Agregar a Favoritos
+                        </button>
+                    </div>
+
+                    <div class="product-guarantee">
+                        <div class="guarantee-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Garantía de calidad</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-truck"></i>
+                            <span>Envío gratis en compras mayores a S/ 150</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-undo"></i>
+                            <span>30 días para devoluciones</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <section class="newsletter-section">
-        <div class="container newsletter-content">
-            <h2>¡Mantente al día con Fuxion!</h2>
-            <p>Suscríbete a nuestro boletín para recibir las últimas noticias, ofertas y consejos de salud.</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Tu correo electrónico" required>
-                <button type="submit" class="btn btn-primary">Suscribirse</button>
-            </form>
+    <!-- Product Tabs -->
+    <section class="product-tabs">
+        <div class="container">
+            <div class="tabs-header">
+                <button class="tab-btn active" onclick="openTab(event, 'description')">
+                    Descripción Detallada
+                </button>
+                <button class="tab-btn" onclick="openTab(event, 'reviews')">Reseñas</button>
+            </div>
+
+            <div id="description" class="tab-content active">
+                <h3>Descripción Completa de Rexet Caja 7x5g</h3>
+                <p>
+                    <strong>Rexet</strong> es un suplemento especialmente formulado para proteger y desintoxicar el hígado, contribuyendo a mejorar la digestión y brindando propiedades antioxidantes.
+                </p>
+                <p>Su presentación en sobres individuales lo hace práctico y fácil de consumir diariamente.</p>
+
+                <h4>Beneficios adicionales:</h4>
+                <ul>
+                    <li>Apoya la función hepática saludable.</li>
+                    <li>Contribuye a la desintoxicación natural.</li>
+                    <li>Mejora la digestión general.</li>
+                </ul>
+
+                <img
+                  src="https://aware-backend.s3.amazonaws.com/media/product/img/Rexet_K395eY5.png"
+                  alt="Flyer Rexet Caja 7x5g"
+                  style="width:100%; max-width: 600px; display: block; margin: 2rem auto;"
+                />
+            </div>
+
+            <div id="reviews" class="tab-content" style="display: none;">
+                <h3>Reseñas de Clientes</h3>
+                <div class="reviews-summary">
+                    <div class="rating-overview">
+                        <div class="overall-rating">
+                            <span class="rating-number">4.2</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="total-reviews">15 reseñas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews-list">
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-name">Ana Torres</div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p>"Me ayudó mucho con la digestión y me siento con más energía."</p>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-name">Luis Ramirez</div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <p>"Buen producto, cumple lo que promete."</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -119,6 +285,26 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
+        }
+        function openTab(evt, tabName) {
+            const tabcontent = document.getElementsByClassName("tab-content");
+            const tabbuttons = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            for (let i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
 
     <script src="../script.js"></script>
 </body>
